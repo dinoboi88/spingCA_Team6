@@ -35,4 +35,10 @@ public class Department {
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
     }
+
+	public Department() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+    
 }

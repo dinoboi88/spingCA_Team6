@@ -37,6 +37,7 @@ public class Student extends Person{
         this.semesterEnrolled = semesterEnrolled;
         this.GPA = GPA;
         this.degree = degree;
+        
     }
 
     public int getStudentId() {
@@ -86,4 +87,6 @@ public class Student extends Person{
     public void setDegree(Degree degree) {
         this.degree = degree;
     }
+    
+    
 }

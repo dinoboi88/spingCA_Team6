@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="StudentInfo.html" 
+						th:href="@{/student/info/}+${studentId}"> Student Info</a>
+						
+						<br />
+						
+<a href="CourseEnrolledList.html" 
+						th:href="@{/student/courseEnrolled/}+${studentId}"> Course Enrolled</a>		
+						
+						<br />			
+
+<a href="courseScore.html" 
+						th:href="@{/student/courseScore/}+${studentId}"> Course Score</a>	
+						
+						<br />
+						
+<a href="logout.html" th:href="@{/student/logout}">Log Out</a> 
+			
+</body>
+</html>

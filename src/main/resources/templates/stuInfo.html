@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>StudentInfo</title>
+</head>
+<body>
+<h1>Student Info</h1>
+
+<a href="Navigate.html" th:href="@{/student/navigate}">Navigate</a>
+
+<h2 th:text="${session.studentUser.UserId.username}">UserName</h2>
+
+<a href="EditInfo.html" th:href="@{/student/edit/}+${student.studentId}"> Edit Contact Information </a>
+
+<p>
+<span th:text="${student.lastName}">StduentLastName</span>
+<span th:text="${student.firstName}">StduentFirstName</span>
+<span th:text="${student.middleName}">StduentMiddleName</span>
+</p>
+<p th:text="${student.gender}">Gender</p>
+<p th:text="${student.birthDate}">Birth Date</p>
+<p th:text="${student.email}">Email</p>
+<p th:text="${student.mobile}">Mobile</p>
+<p th:text="${student.address}">Address</p>
+<p th:text="${student.status}">Status</p>
+<p th:text="${student.level}">Level</p>
+<p th:text="${student.semesterEnrolled.semesterLabel}">semester</p>
+<p th:text="${student.GPA}">GPA</p>
+<p th:text="${student.degree.degree_label}">Degree</p>
+
+
+</body>
+</html>

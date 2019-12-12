@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudentInfo</title>
+</head>
+<body>
+<h1>Student Info</h1>
+
+<form action="#" th:object="${student}" th:action="@{/student/editSave}"
+		method="get" >
+		
+
+<fieldset>
+Email: <input type="text" th:field="*{email}" />
+</fieldset>
+
+<fieldset>
+Mobile: <input type="text" th:field="*{mobile}" />
+</fieldset>
+
+<fieldset>
+Address: <input type="text" th:field="*{address}" />
+</fieldset>
+
+<fieldset>
+			<button type="submit">Save</button>
+		</fieldset>
+		
+		
+		<input type="hidden" id="id" th:field="*{studentId}">
+</form>
+
+
+</body>
+</html>		

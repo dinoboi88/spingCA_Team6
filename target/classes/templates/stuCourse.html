@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stuCourseEnrolled</title>
+</head>
+<body>
+<h1>Enrolled Courses</h1>
+<a href="Navigate.html" th:href="@{/student/navigate}">Navigate</a>
+	<table >
+		<tr th:each="stuCourse:${courseEnrolled}">
+			<td th:text=${stuCourse.courseByStudent.courseCode}>Course Code</td>
+			<td th:text=${stuCourse.courseByStudent.courseName}>Course Name</td>
+			<td th:text=${stuCourse.semesterStudentCourse.semesterLabel}>Semester Label</td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -3,14 +3,14 @@ insert into semester(semester_label) values ('[2017-2018] Semester 1'), ('[2017-
 
 insert into degree(degree_label) values('Graduate Diploma in System Analysis'), ('Master of Technology in Software Engineering');
 
-insert into student(first_name, last_name, middle_name, birth_date, gender, email, mobile, level, status, semester_id, degree_id, address)
-values('Chi', 'Phung', 'Khanh', '1996-08-25', 'Female', 'khanhchi2596@gmail.com', '98912598','Year 1', 'Enrolling', 5, 1, ''),
-('Ying', 'Feng', 'Li', '1995-09-25', 'Female', 'fengliying@gmail.com', '87654321', 'Year 1', 'Enrolling', 5, 1, ''),
-('Bo', 'Wang', 'Yi', '1997-04-23', 'Male', 'wangyibo@gmail.com', 'Year 1', '86083571','Enrolling', 5, 1, ''),
-('Zhan', 'Xiao', '', '1991-08-11', 'FMale', 'xiaozhan@gmail.com', 'Year 1', '71672878', 'Enrolling', 5, 1, '' ),
-('Fan', 'Wu', 'Yi', '1992-05-21', 'Male', 'kriswu@gmail.com', '92376743', 'Year 1', 'Enrolling', 5, 1, '' ),
-('Hun', 'Oh', 'Se', '1990-07-07', 'Male', 'ohsehun@gmail.com', '81387481','Year 1', 'Enrolling', 5, 1, '' ),
-('Kyo', 'Song', 'Hye', '1988-02-26', 'Female', 'songhyekyo@gmail.com', '81368434','Year 1', 'Enrolling', 5, 1, '' );
+insert into student(first_name, last_name, middle_name, birth_date, gender, email, mobile, level, status, semester_id,gpa, degree_id, address)
+values('Chi', 'Phung', 'Khanh', '1996-08-25', 'Female', 'khanhchi2596@gmail.com', '98912598','Year 1', 'Enrolling', 5,0.0, 1, ''),
+('Ying', 'Feng', 'Li', '1995-09-25', 'Female', 'fengliying@gmail.com', '87654321', 'Year 1', 'Enrolling', 5, 0.0,1, ''),
+('Bo', 'Wang', 'Yi', '1997-04-23', 'Male', 'wangyibo@gmail.com', '86083571', 'Year 1','Enrolling', 5,0.0,1, ''),
+('Zhan', 'Xiao', '', '1991-08-11', 'FMale', 'xiaozhan@gmail.com', '71672878','Year 1' , 'Enrolling', 5,0.0,1, ''),
+('Fan', 'Wu', 'Yi', '1992-05-21', 'Male', 'kriswu@gmail.com', '92376743', 'Year 1', 'Enrolling', 5,0.0,1, ''),
+('Hun', 'Oh', 'Se', '1990-07-07', 'Male', 'ohsehun@gmail.com', '81387481','Year 1', 'Enrolling', 5, 0.0,1, ''),
+('Kyo', 'Song', 'Hye', '1988-02-26', 'Female', 'songhyekyo@gmail.com', '81368434','Year 1', 'Enrolling', 5,0.0,1, '');
 
 
 insert into department(department_name) values('Institute of System Science'), ('School of computing'), ('Business school'), ('Faculty of Science');

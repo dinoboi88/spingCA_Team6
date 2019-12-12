@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stuCourseEnrolled</title>
+</head>
+<body>
+<h1>Academic Records</h1>
+
+<a href="Navigate.html" th:href="@{/student/navigate}">Navigate</a>
+
+<table>
+<tr>
+<th>Semester</th>
+</tr>
+     <tr th:each="mapEntry : ${semCourseMap}">
+     <td th:text="${mapEntry.key.semesterLabel}">11</td>
+     <td>
+     <table>
+     <tr>
+     <th>Course Code</th>
+     <th>Course Name</th>
+     <th>Course Unit</th>
+     <th>Score</th>
+     </tr>
+     <tr th:each="studentcourse: ${mapEntry.value}">
+     <td th:text="${studentcourse.courseByStudent.courseCode}">11</td>
+      <td th:text="${studentcourse.courseByStudent.courseName}">11</td>
+      <td th:text="${studentcourse.courseByStudent.courseUnit}">11</td>
+       <td th:text="${studentcourse.score}">11</td>
+     </tr>
+     </table>
+     </td>
+	</tr>
+</table>
+
+
+GPA:<p th:text="${student.GPA}"></p> 
+</body>
+</html>
