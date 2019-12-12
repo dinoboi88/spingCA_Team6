@@ -15,8 +15,15 @@ public class Department {
 
     @OneToMany(mappedBy = "departmentLecturer")
     private List<Lecturer> lecturers;
+    
+    
 
-    public Department(String departmentName) {
+    public Department() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Department(String departmentName) {
         this.departmentName = departmentName;
     }
 

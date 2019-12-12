@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+    <div align="center" >
+        <h2>List of Courses</h2>
+        <table border='1' class="table table-striped">
+            <tr>
+                <th>CourseCode</th>
+                <th>CourseName</th>
+                <th>CourseUnit</th>
+            </tr>
+            <tr th:each="course : ${clist}">
+                <td ><a th:href="${'/ListofStudents?Id=' + course.getCourseId()}" th:text="${course.getCourseCode()}"></a></td>
+                <td  th:text="${course.getCourseName()}"></td>
+                <td  th:text="${course.getCourseUnit()}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

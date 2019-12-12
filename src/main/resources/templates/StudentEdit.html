@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/Student/update" method="post">
+<input type="hidden" name="courseid" th:value="${courseid}" />
+<input type="hidden" name="studid" th:value="${studid}" />
+<table>
+   <tr>
+   <td>Score:</td><td><input type="number" name="score" required></td>
+   </tr>
+   <tr>
+   <td><input type="submit" value="Update" /></td>
+   </tr>
+</table>   
+</form>
+
+
+</body>
+</html>

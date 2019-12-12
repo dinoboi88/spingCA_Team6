@@ -14,7 +14,7 @@ public class Lecturer extends Person{
     private Department departmentLecturer;
 
     @OneToMany(mappedBy = "lecturerByCourse")
-    private List<LecturerCourse> lecturerCourses;
+    private List<LecturerCourse> lecturemrCourses;
 
     @OneToMany(mappedBy = "lecturerByLeave")
     private List<LecturerLeave> lecturerLeaves;
