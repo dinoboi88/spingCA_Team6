@@ -1,6 +1,7 @@
 package SpringCA.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Entity
@@ -8,7 +9,9 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int courseId;
+    @NotEmpty(message = "Course code cannot be blank")
     private String courseCode;
+    @NotEmpty(message = "Course name cannot be blank")
     private String courseName;
     private int courseUnit;
 
@@ -70,4 +73,11 @@ public class Course {
     public void setDepartmentCourse(Department departmentCourse) {
         this.departmentCourse = departmentCourse;
     }
+
+	@Override
+	public String toString() {
+		return courseName;
+	}
+    
+    
 }

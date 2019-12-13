@@ -91,4 +91,8 @@ public class Person {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+    @Override
+	public String toString() {
+		return firstName +" "+ middleName + "," + lastName;
+	}
 }

@@ -40,4 +40,8 @@ public class Semester {
     public void setSemesterLabel(String semesterLabel) {
         this.semesterLabel = semesterLabel;
     }
+    @Override
+	public String toString() {
+		return semesterLabel;
+	}
 }

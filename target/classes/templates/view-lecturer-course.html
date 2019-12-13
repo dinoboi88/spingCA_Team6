@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+table{width:100%;}
+table td, table th { border: 1px solid grey;}
+table th { background: #eee;}
+.pagination-div{user-select: none;}
+.pagination-div span{border-radius:3px;border:1px solid #999;
+   padding:5px;margin:10px 0px 0px 10px;display:inline-block}
+span.selected{background:#ccf;}
+</style>
+<title>Courses Assigned to Lecturers</title>
+</head>
+<body>
+<h2>Courses Assigned to Lecturer</h2>
+
+<p th:if="${page.content}==null">No courses assigned to the lecturer</p>
+
+<table th:if="${page.content}!=null">
+    <tr><th>Lecturer</th>
+        <th>Course</th>
+        <th>Semester</th>
+        <th>Action</th>
+    </tr>
+    <tr	th:each="lecturer_course : ${page.content}">
+        <td th:text="${lecturer_course.lecturerByCourse}"></td>
+        <td th:text="${lecturer_course.courseByLecturer}"></td>
+        <td th:text="${lecturer_course.semesterLecturerCourse}"></td>
+        <td>
+        	<a th:href="@{/view-student-course-page/{courseId}/{semId}
+        	(courseId=${lecturer_course.courseByLecturer.courseId},
+        	semId=${lecturer_course.semesterLecturerCourse.semesterId})}">View Students</a>
+        </td>
+    </tr>
+</table>
+
+
+<div class="pagination-div">
+    <span th:if="${page.hasPrevious()}">
+        <a th:href="@{/view-lecturer-course/(page=${page.number-1},size=${page.size})}">Previous</a>
+    </span>
+    <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+        <span th:if="${page.number == i}" class="selected">[[${i}+1]]</span>
+        <span th:unless="${page.number == i}">
+             <a th:href="@{/view-lecturer-course/(page=${i},size=${page.size})}">[[${i}+1]]</a>
+        </span>
+    </th:block>
+    <span th:if="${page.hasNext()}">
+        <a th:href="@{/view-lecturer-course/(page=${page.number+1},size=${page.size})}">Next</a>
+    </span>
+</div>
+
+</body>
+</html>
