@@ -1,6 +1,6 @@
 package SpringCA.entities;
 
-import SpringCA.generator.UsernameGenerator;
+//import SpringCA.generator.UsernameGenerator;
 import org.hibernate.annotations.Formula;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;

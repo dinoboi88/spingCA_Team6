@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Student Score</title>
+</head>
+<body>
+	<form action="#" th:action="@{/update-student-course-score/{studentId}/{courseId}/{semId}
+	(studentId=${studentId},
+	courseId=${courseId},
+	semId=${semId})
+	}" th:object="${studentCourse}" method="post">
+	
+		<table>
+			<tr>
+				<td>Student Name</td>
+				<td th:text="*{studentByCourse}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Course</td>
+				<td th:text="*{courseByStudent}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Semester</td>
+				<td th:text="*{semesterStudentCourse}" readonly="readonly"></td>
+			</tr>		
+			<tr>
+				<td>Score</td>
+				<td>
+						<input type="number" th:field="*{score}" min=0 max=5 step=0.01/>
+						
+						<input type=hidden th:field="${semId}"/>
+						<input type=hidden th:field="${studentId}"/>
+						<input type=hidden th:field="${courseId}"/>
+				</td>
+			</tr>	
+			
+            <tr>
+                 <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>					
+		
+		</table>
+		
+		
+	</form>
+</body>
+</html>

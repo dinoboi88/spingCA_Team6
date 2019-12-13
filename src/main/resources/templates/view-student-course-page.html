@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+table{width:100%;}
+table td, table th { border: 1px solid grey;}
+table th { background: #eee;}
+.pagination-div{user-select: none;}
+.pagination-div span{border-radius:3px;border:1px solid #999;
+   padding:5px;margin:10px 0px 0px 10px;display:inline-block}
+span.selected{background:#ccf;}
+</style>
+<title>Students in a Semester Course</title>
+</head>
+<body>
+<h2>Student List</h2>
+
+<!-- 
+<h3 th:text=${page.content[0].student_course.courseByStudent.courseName}></h3>
+<h3 th:text=${page.content[0].student_course.semesterStudentCourse.semesterLabel}></h3>
+ -->
+
+<p th:if="${page.content}==null">No students in this semester's course</p>
+
+<table th:if="${page.content}!=null">
+    <tr><th>Student Name</th>
+        <th>Score</th>
+        <th>Course</th>
+        <th>Semester</th>
+        <th>Action</th>
+    </tr>
+    <tr	th:each="student_course : ${page.content}">
+        <td th:text="${student_course.studentByCourse}"></td>
+        <td th:text="${student_course.score}"></td>
+        <td th:text="${student_course.courseByStudent}"></td>
+        <td th:text="${student_course.semesterStudentCourse}"></td>
+        <td>
+        	<a th:href="@{/student-course-score/{studentId}/{courseId}/{semId}
+        	(studentId=${student_course.studentByCourse.studentId},
+        	courseId=${student_course.courseByStudent.courseId},
+        	semId=${student_course.semesterStudentCourse.semesterId})}">Update Score</a>
+        </td>
+    </tr>
+</table>
+
+
+<div class="pagination-div">
+    <span th:if="${page.hasPrevious()}">
+        <a th:href="@{/view-student-course-page/{courseId}/{semId}
+        (courseId=${courseId},
+        semId=${semId},
+        page=${page.number-1},size=${page.size})}">Previous</a>
+    </span>
+    <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+        <span th:if="${page.number == i}" class="selected">[[${i}+1]]</span>
+        <span th:unless="${page.number == i}">
+             <a th:href="@{/view-student-course-page/{courseId}/{semId}
+             (courseId=${courseId},
+             semId=${semId},
+             page=${i},size=${page.size})}">[[${i}+1]]</a>
+        </span>
+    </th:block>
+    <span th:if="${page.hasNext()}">
+        <a th:href="@{/view-student-course-page/{courseId}/{semId}
+        (courseId=${courseId},
+        semId=${semId},
+        page=${page.number+1},size=${page.size})}">Next</a>
+    </span>
+</div>
+
+</body>
+</html>
