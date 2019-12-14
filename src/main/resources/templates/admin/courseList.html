@@ -3,14 +3,67 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-
+<style>   
+		.navbar-custom{
+		background-color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}	
+		
+		.navbar-custom a{
+		color:#fff
+		}
+		
+		.navbar-custom a:hover{
+		background-color:#D07221 !important;
+		}
+		
+		.welcome{float:right;
+		color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+		
+		.btn-link{
+		color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+		
+		.table_div{
+		max-width:1500px;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		body.courselist a.courselist{
+		background-color:#D07221
+		}
+		
+		div.add_course{
+		margin-top:30px;
+		margin-bottom:30px;
+		margin-left:50px;
+		color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+		
+</style>
+<body class="courselist">
+<div th:insert="~{admin/index :: adminheader}"></div>
+<div class="add_course">
+<a href="/admin/course/addCourse">Add a new Course</a>
+</div>
 <div th:switch="${courseList}">
     <h2 th:case="null">No courses yet!</h2>
-    <div th:case="*">
-        <h2>Users</h2>
-        <table>
+    <div th:case="*"  class="table_div">
+        <table class="table">
             <thead>
             <tr>
                 <th>Course code</th>
@@ -35,12 +88,11 @@
             </tbody>
         </table>
     </div>
-    <p><a href="/admin/course/addCourse">Add a new course</a></p>
 </div>
 <div>
-    <div>
+    <div style="position:relative; float:right; margin-right:50px">
         <nav>
-            <ul>
+            <ul class="pagination">
                 <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
                     <a class="page-link" th:href="@{|/admin/course/list/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
                 </li>

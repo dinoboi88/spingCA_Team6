@@ -1,22 +1,81 @@
+
 <!DOCTYPE html>
 <html xmlns:th="https://www.thymeleaf.org">
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-<p th:if="${adminUser.adminUser.middleName} != null">Welcome, <a th:href="@{/admin/profile}">[[${adminUser.adminUser.lastName}]]
-    [[${adminUser.adminUser.middleName}]] [[${adminUser.adminUser.firstName}]]</a></p>
-<p th:if="${adminUser.adminUser.middleName} == null">Welcome, <a>[[${adminUser.adminUser.lastName}]]
-    [[${adminUser.adminUser.firstName}]]</a></p>
-<a th:href="@{/admin/student/list}">Student list</a><br/>
-<a th:href="@{/admin/lecturer/list}">Lecturer list</a><br/>
-<a th:href="@{/admin/course/list}">Course list</a><br/>
-<a th:href="@{/admin/course/registration/review}">Review course registration list</a>
 
-<form th:action="@{/admin/j_spring_security_logout}" method="post">
+<style>   
+		.navbar-custom{
+		background-color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}	
+		
+		.navbar-custom a{
+		color:#fff
+		}
+		
+		.navbar-custom a:hover{
+		background-color:#D07221 !important;
+		}
+		
+		.welcome{float:right;
+		color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+		
+		.btn-link{
+		color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+		
+		
+</style>
+
+
+<body>
+
+<div th:fragment="adminheader">
+<div class="container-fluid" style="margin-top:50px">
+<ul class="list-inline">
+
+<li class="welcome">
+<form th:action="@{/admin/j_spring_security_logout}" method="post" >
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-    <input type="submit" value="Logout" />
+    <input type="submit" value="Logout" class="btn-link"/> 
 </form>
+</li>
+
+<li class="welcome" >
+<p class="text-right" th:if="${adminUser.adminUser.middleName} != null">Welcome, <a th:href="@{/admin/profile}">[[${adminUser.adminUser.lastName}]]
+    [[${adminUser.adminUser.middleName}]] [[${adminUser.adminUser.firstName}]]</a></p>
+<p class="text-right" th:if="${adminUser.adminUser.middleName} == null">Welcome, <a>[[${adminUser.adminUser.lastName}]]
+    [[${adminUser.adminUser.firstName}]]</a></p>  
+</li>
+</ul> 
+</div>
+    
+<nav class="navbar-custom">  
+<div class="container-fluid">
+<ul class="nav navbar-nav">
+<li ><a th:href="@{/admin/student/list}" class="studentlist" >Student list</a><br/></li>
+<li ><a th:href="@{/admin/lecturer/list}" class="lecturerlist" >Lecturer list</a><br/></li>
+<li ><a th:href="@{/admin/course/list}" class="courselist" >Course list</a><br/></li>
+<li ><a th:href="@{/admin/course/registration/review}" class="reviewcourseReg" >Review course registration list</a></li>
+</ul>
+</div>
+</nav>
+
+
+
+</div>
 </body>
 </html>

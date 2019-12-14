@@ -70,6 +70,10 @@ public class AdminController {
     }
 
 
+    @ModelAttribute("adminUser")
+    public  AdminUser getStudentUser(){
+	    return adminUserRepository.findByUsername(userService.getUsername());
+    }
 
     @ModelAttribute(name = "semesters")
     public Iterable<Semester> getSemesters() {
