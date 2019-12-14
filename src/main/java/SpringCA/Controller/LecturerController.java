@@ -70,7 +70,7 @@ public class LecturerController {
 	public String getLecturerCourse(@PageableDefault(size=3) Pageable pageable,Model model) {
 		Page<LecturerCourse> page=lectCourRepo.findAll(pageable);
 		model.addAttribute("page", page);
-		return "/view-lecturer-course";
+		return "view-all-lecturers-courses";
 	}
 	
 	@GetMapping("view-lecturer-course")//get specific lecturer's assigned courses; 
@@ -202,13 +202,14 @@ public class LecturerController {
 	
 	@GetMapping("/lecturer-leave-application/{lecturerId}/{startDate}")
 	public ModelAndView editLecturerLeave(@PathVariable("lecturerId")int lecturerId,
-			@PathVariable("startDate")String startDate) { //,Model model
+			@PathVariable("startDate")String startDate,HttpSession session) { //,Model model
 		
 		LecturerLeave lectLeave=lectLeaveRepo.findLecturerLeaveByLecturerIdAndStartDate(lecturerId, startDate);
 			
 		ModelAndView mav=new ModelAndView("edit-lecturer-leave-application");
 
 		mav.addObject("lecturerLeave",lectLeave);
+		session.setAttribute("leaveStartDate", startDate);
 		
 		return mav;
 	}
@@ -228,9 +229,9 @@ public class LecturerController {
 		}
 		
 		int lecturerId=(int) httpSession.getAttribute("lecturerId");
-		
+		String currentLeaveStartDate=(String) httpSession.getAttribute("leaveStartDate");
 		LecturerLeave lectLeaveCurrent=lectLeaveRepo.
-				findLecturerLeaveByLecturerIdAndStartDate(lecturerId, lectLeave.getStartDate().toString());
+				findLecturerLeaveByLecturerIdAndStartDate(lecturerId, currentLeaveStartDate);
 		List<LecturerLeave> lecturerLeaveList=lectLeaveRepo.findAllLecturerLeaveByLecturerId(lecturerId);
 		lecturerLeaveList.remove(lectLeaveCurrent);
 		//int lecturerId=(int) httpSession.getAttribute("lecturerId");
@@ -257,6 +258,7 @@ public class LecturerController {
 		lectLeave.setLecturerByLeave(lecturerRepo.findByLecturerId(lecturerId));
 		lectLeave.setStatus("Pending");
 		lectLeaveRepo.save(lectLeave);
+		httpSession.removeAttribute("leaveStartDate");
 
 		return"redirect:/view-lecturer-leave-applications";
 	}
