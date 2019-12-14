@@ -4,6 +4,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Student Score</title>
+<th:block th:include="${'/lecturer/indexwithoutlecturer'}"></th:block>
 </head>
 <body>
 	<form action="#" th:action="@{/lecturer/update/score/{studentId}/{courseId}/{semId}
@@ -12,7 +13,7 @@
 	semId=${semId})
 	}" th:object="${studentCourse}" method="post">
 	
-		<table>
+		<table align="center" border="1">
 			<tr>
 				<td>Student Name</td>
 				<td th:text="*{studentByCourse}" readonly="readonly"></td>

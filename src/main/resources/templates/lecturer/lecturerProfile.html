@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+    <th:block th:include="${'/lecturer/indexwithoutlecturer'}"></th:block>
 </head>
 <body>
 <p th:text="${lecturerUser.lecturerUser.firstName}"></p>

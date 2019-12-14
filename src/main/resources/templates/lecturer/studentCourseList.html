@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
 <style>
-table{width:100%;}
+table{width:80%;}
 table td, table th { border: 1px solid grey;}
 table th { background: #eee;}
 .pagination-div{user-select: none;}
@@ -12,18 +12,19 @@ table th { background: #eee;}
 span.selected{background:#ccf;}
 </style>
 <title>Students in a Semester Course</title>
+<th:block th:include="${'/lecturer/indexwithoutlecturer'}"></th:block>
 </head>
 <body>
-<h2>Student List</h2>
+<h2 align ="center">Student List</h2>
 
 <!-- 
 <h3 th:text=${page.content[0].student_course.courseByStudent.courseName}></h3>
 <h3 th:text=${page.content[0].student_course.semesterStudentCourse.semesterLabel}></h3>
  -->
 
-<p th:if="${page.content}==null">No students in this semester's course</p>
-
-<table th:if="${page.content}!=null">
+<p th:if="${page.content}==null" align = "center">No students in this semester's course</p>
+<br>
+<table align = "center" th:if="${page.content}!=null">
     <tr><th>Student Name</th>
         <th>Score</th>
         <th>Course</th>
@@ -45,7 +46,7 @@ span.selected{background:#ccf;}
 </table>
 
 
-<div class="pagination-div">
+<div align = "center" class="pagination-div">
     <span th:if="${page.hasPrevious()}">
         <a th:href="@{/lecturer/course/student/{courseId}/{semId}
         (courseId=${courseId},
