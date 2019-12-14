@@ -1,9 +1,9 @@
 package SpringCA.entities.CompositeId;
 
-import SpringCA.entities.LecturerLeave;
-
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class LecturerLeaveId implements Serializable {
 
@@ -13,12 +13,13 @@ public class LecturerLeaveId implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private int lecturerByLeave;
-
-    private LocalDateTime startDate;
+    
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private LocalDate startDate;
 
     public LecturerLeaveId(){}
 
-    public LecturerLeaveId(int lecturerByLeave, LocalDateTime startDate) {
+    public LecturerLeaveId(int lecturerByLeave, LocalDate startDate) {
         this.lecturerByLeave = lecturerByLeave;
         this.startDate = startDate;
     }
@@ -31,11 +32,11 @@ public class LecturerLeaveId implements Serializable {
         this.lecturerByLeave = lecturerByLeave;
     }
 
-    public LocalDateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 

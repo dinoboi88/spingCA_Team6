@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Lecturer Leave</title>
+</head>
+
+<!-- 
+/{lecturerId}/{startDate}(lecturerId=${lecturerLeave.lecturerByLeave.lecturerId},startDate=${lecturerLeave.startDate})
+ -->
+
+<body>
+	<form action="#" th:action="@{/update-lecturer-leave-application}" th:object="${lecturerLeave}" method="post">
+	
+		<table>
+			<tr>
+				    <td>Leave Start Date</td>
+			<td>
+					<input type="date" th:field="*{startDate}" id="startDate" placeholder="startDate">
+					<span th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></span>
+			</td>
+			</tr>
+			<tr>
+				<td>Leave End Date</td>
+				<td>
+					<!-- <label for="endDate">Leave End Date</label> -->
+					<input type="date" th:field="*{endDate}" id="endDate" placeholder="endDate">
+					<span th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></span>
+				</td>
+			</tr>	
+			
+            <tr>
+            	 <td><button type="submit">Update Leave</button> </td>
+            	 <td><button type="submit" onclick="window.location='/view-lecturer-leave-applications';return false;">Cancel</button></td>
+            </tr>					
+		
+		</table>
+
+	</form>
+</body>
+</html>
