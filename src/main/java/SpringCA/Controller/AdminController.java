@@ -101,6 +101,12 @@ public class AdminController {
         return departmentRepository.findAll();
     }
 
+    @ModelAttribute("adminUser")
+    private AdminUser getAdminUser(){
+        return adminUserRepository.findByUsername(userService.getUsername());
+    }
+
+
     @ModelAttribute("nextSemester")
     private Semester getNextSemester(){
         Iterable<Semester> semesters = semesterRepository.findAll();
@@ -388,7 +394,7 @@ public class AdminController {
         model.addAttribute("semesterId", semesterId);
         model.addAttribute("lecturerList", lecturerCourses);
 
-        Pageable pageable = PageRequest.of(page - 1, 3);
+        Pageable pageable = PageRequest.of(page - 1, size);
         Page<StudentCourse> studentCoursePages = studentCourseRepository.findByCourseByStudent_CourseIdAndSemesterStudentCourse_SemesterIdAndStatus(courseId, semesterId, "Approved", pageable);
         int totalStudentCoursePages = studentCoursePages.getTotalPages();
         model.addAttribute("studentCourseList", studentCoursePages.getContent());
@@ -429,7 +435,7 @@ public class AdminController {
         return "redirect:/admin/course/detail/{id}";
     }
 
-    @GetMapping("/student/{id}}")
+    @GetMapping("/student/{id}")
     public String studentDetail(@PathVariable("id") int id, Model model) {
         Student student = studentRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student Id:" + id));
@@ -439,7 +445,7 @@ public class AdminController {
         return "admin/studentDetail";
     }
 
-    @GetMapping("/lecturer/{id}}")
+    @GetMapping("/lecturer/{id}")
     public String lecturerDetail(@PathVariable("id") int id, Model model) {
         Lecturer lecturer = lecturerRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid lecturer Id:" + id));
@@ -449,20 +455,34 @@ public class AdminController {
         return "admin/lecturerDetail";
     }
 
-    @GetMapping("/course/registration/review")
-    public String getPendingCourses(Model model){
-        Iterable<StudentCourse> pendingCourses =
+    @GetMapping("/course/registration/review/page/{page}")
+    public String getPendingCourses(Model model, @PathVariable("page") int page){
+        Pageable pageable = PageRequest.of(page - 1, size);
+        Page<StudentCourse> pendingCoursePages =
                 studentCourseRepository.findBySemesterStudentCourse_SemesterIdAndStatus(
-                        getNextSemester().getSemesterId(), "Pending");
-        if(pendingCourses != null)model.addAttribute("pendingCourses", pendingCourses);
+                        getNextSemester().getSemesterId(), "Pending", pageable);
+        int totalPendingCoursePages = pendingCoursePages.getTotalPages();
+        if(pendingCoursePages != null) model.addAttribute("pendingCourses", pendingCoursePages.getContent());
+
+        if (totalPendingCoursePages > 0) {
+            List<Integer> pageNumbers = IntStream.rangeClosed(1, totalPendingCoursePages).boxed().collect(Collectors.toList());
+            model.addAttribute("pageNumbers", pageNumbers);
+            model.addAttribute("page", page);
+        }
+
+//        if(pendingCourses != null)model.addAttribute("pendingCourses", pendingCourses);
         return "admin/courseRegistrationReview";
     }
 
-    @GetMapping("/course/{action}/{studentId}/{semesterId}/{courseId}")
+    @GetMapping("/course/{page}/{action}/{studentId}/{semesterId}/{courseId}")
     public String reviewCourse(@PathVariable("studentId") int studentId, @PathVariable("semesterId") int semesterId,
-                               @PathVariable("courseId") int courseId, @PathVariable("action") String action){
+                               @PathVariable("courseId") int courseId, @PathVariable("action") String action,
+                               @PathVariable("page") int page){
         adminService.reviewCourse(studentId, semesterId, courseId, action);
-        return "redirect:/admin/course/registration/review";
+        int count = studentCourseRepository.findBySemesterStudentCourse_SemesterIdAndStatus(
+                semesterId, "Pending").size();
+        if ((count % size == 0) && (count / size == (page - 1))) page -= 1;
+        return "redirect:/admin/course/registration/review/page/" + page;
 
     }
 }

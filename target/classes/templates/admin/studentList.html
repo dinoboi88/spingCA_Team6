@@ -3,35 +3,89 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<style>
+    .navbar-custom{
+        background-color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .navbar-custom a{
+        color:#fff
+    }
+
+    .navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
+    .welcome {float:right;
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .btn-link{
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .table_div{
+        max-width:1500px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    body.studentlist a.studentlist{
+        background-color:#D07221
+    }
+
+    div.add_student{
+        margin-top:30px;
+        margin-bottom:30px;
+        margin-left:50px;
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+</style>
+
+<body class="studentlist">
+
+<div th:insert="~{admin/index :: adminheader}"></div>
+
+<div class="add_student">
+    <a href="/admin/student/addStudent" >Add a new Student</a>
+</div>
 
 <div th:switch="${studentList}">
     <h2 th:case="null">No users yet!</h2>
-    <div th:case="*">
-        <h2>Users</h2>
-        <table>
+    <div th:case="*" class="table_div">
+        <table class="table" >
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Birthdate</th>
-                <th>Mobile phone</th>
-                <th>Email</th>
-                <th>Degree</th>
-                <th>Semester</th>
-                <th>Level</th>
-                <th>Status</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th >Name</th>
+                <th >Gender</th>
+                <th >Birthdate</th>
+                <th >Mobile phone</th>
+                <th >Email</th>
+                <th >Degree</th>
+                <th >Semester</th>
+                <th >Level</th>
+                <th >Status</th>
+                <th >Edit</th>
+                <th >Delete</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="student : ${studentList}">
-                <td th:if="${student.middleName} != null">
-                    [[${student.lastName} + ' ' + ${student.middleName} + ' ' + ${student.firstName}]]
+                <td>
+                    <a th:href="@{|/admin/student/${student.studentId}|}" th:text="${student}"></a>
                 </td>
-                <td th:if="${student.middleName} == null">[[${student.lastName} + ' ' + ${student.firstName}]]</td>
                 <td th:text="${student.gender}"></td>
                 <td th:text="${#dates.format(student.birthDate, 'dd-MM-yyyy')}"></td>
                 <td th:text="${student.mobile}"></td>
@@ -46,19 +100,20 @@
             </tbody>
         </table>
     </div>
-    <p><a href="/admin/student/addStudent">Add a new user</a></p>
+
 </div>
 
-<div>
-    <div>
-        <nav>
-            <ul>
-                <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
-                    <a class="page-link" th:href="@{|/admin/student/list/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+
+<div style="position:relative; float:right; margin-right:50px">
+    <nav>
+        <ul class="pagination" >
+            <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
+                <a class="page-link" th:href="@{|/admin/student/list/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
+            </li>
+
+
+        </ul>
+    </nav>
 </div>
 
 </body>

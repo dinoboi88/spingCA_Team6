@@ -30,14 +30,20 @@ insert into course(course_code, course_name, course_unit, department_id) values
 insert into student_course(course_id, semester_id, student_id, score, status) values
 (1, 5, 1, 0.0, 'Approved'), (1, 5, 2, 0.0, 'Approved'), (1, 5, 3, 0.0, 'Approved'), (1, 5, 4, 0.0, 'Approved'),
 (1, 5, 5, 0.0, 'Approved'), (1, 5, 6, 0.0, 'Approved'), (1, 5, 7, 0.0, 'Approved'),
-(2, 5, 1, 0.0, 'Approved'), (2, 5, 2, 0.0, 'Approved'), (2, 5, 3, 0.0, 'Approved'), (2, 5, 4, 0.0, 'Approved'),
+(2, 5, 1, 0.0, 'Approved'), (2, 5, 2, 0.0, 'Pending'), (2, 5, 3, 0.0, 'Approved'), (2, 5, 4, 0.0, 'Approved'),
 (2, 5, 5, 0.0, 'Approved'), (2, 5, 6, 0.0, 'Approved'), (2, 5, 7, 0.0, 'Approved'),
 (3, 5, 1, 0.0, 'Approved'), (3, 5, 2, 0.0, 'Approved'), (3, 5, 3, 0.0, 'Approved'), (3, 5, 4, 0.0, 'Approved'),
 (3, 5, 5, 0.0, 'Approved'), (3, 5, 6, 0.0, 'Approved'), (3, 5, 7, 0.0, 'Approved'),
 (4, 5, 1, 0.0, 'Approved'), (4, 5, 2, 0.0, 'Approved'), (4, 5, 3, 0.0, 'Approved'), (4, 5, 4, 0.0, 'Approved'),
-(4, 5, 5, 0.0, 'Approved'), (4, 5, 6, 0.0, 'Approved'), (4, 5, 7, 0.0, 'Approved'),
+(4, 5, 5, 0.0, 'Approved'), (4, 5, 6, 0.0, 'Rejected'), (4, 5, 7, 0.0, 'Approved'),
 (5, 5, 1, 0.0, 'Approved'), (5, 5, 2, 0.0, 'Approved'), (5, 5, 3, 0.0, 'Approved'), (5, 5, 4, 0.0, 'Approved'),
-(5, 5, 5, 0.0, 'Approved'), (5, 5, 6, 0.0, 'Approved'), (5, 5, 7, 0.0, 'Approved');
+(5, 5, 5, 0.0, 'Rejected'), (5, 5, 6, 0.0, 'Approved'), (5, 5, 7, 0.0, 'Approved'),
+(1, 6, 1, 0.0, 'Pending'), (1, 6, 2, 0.0, 'Pending'), (1, 6, 3, 0.0, 'Pending'), (1, 6, 4, 0.0, 'Pending'),
+(1, 6, 5, 0.0, 'Pending'), (1, 6, 6, 0.0, 'Pending'), (1, 6, 7, 0.0, 'Pending'),
+(2, 6, 1, 0.0, 'Pending'), (2, 6, 2, 0.0, 'Pending'), (2, 6, 3, 0.0, 'Pending'), (2, 6, 4, 0.0, 'Pending'),
+(2, 6, 5, 0.0, 'Pending'), (2, 6, 6, 0.0, 'Pending'), (2, 6, 7, 0.0, 'Pending'),
+(3, 6, 1, 0.0, 'Pending'), (3, 6, 2, 0.0, 'Pending'), (3, 6, 3, 0.0, 'Pending'), (3, 6, 4, 0.0, 'Pending'),
+(3, 6, 5, 0.0, 'Pending'), (3, 6, 6, 0.0, 'Pending'), (3, 6, 7, 0.0, 'Pending');
 
 insert into lecturer(first_name, middle_name, last_name, gender, birth_date, email, mobile, department_id)
 values('Esther', '', 'Tan', 'Female', '1982-07-12', 'esthertan@gmail.com', '89217764', 1),
@@ -48,7 +54,8 @@ values('Esther', '', 'Tan', 'Female', '1982-07-12', 'esthertan@gmail.com', '8921
 ('Fecilitas', '', 'Seah', 'Fale', '1972-04-23', 'felicitas@gmail.com', '32766747', 1);
 
 insert into lecturer_course(course_id, lecturer_id, semester_id) values
-(1, 1, 5), (1, 2, 5), (2, 2, 5), (2, 3, 5), (2, 4, 5), (3, 5, 5), (3, 6, 5), (4, 2, 5), (4, 3, 5), (5, 3, 5), (5, 4, 5);
+(1, 1, 5), (1, 2, 5), (2, 2, 5), (2, 3, 5), (2, 4, 5), (3, 5, 5), (3, 6, 5), (4, 2, 5), (4, 3, 5), (5, 3, 5), (5, 4, 5),
+(1, 2, 6), (1, 4, 6), (2, 3, 6), (2, 4, 6), (3, 1, 6), (3, 5, 6);
 
 insert into lecturer_leave(lecturer_id, start_date, end_date, status) values
 (1, '2019-12-23', '2020-01-02', 'approved'),
@@ -59,26 +66,26 @@ insert into admin(first_name, middle_name, last_name, gender, birth_date, email,
 ('Megan', '', 'Wang', 'Female', '1986-11-12', 'meganwang@gmail.com', '98737646');
 
 insert into admin_user(admin_id, username, password) values
-(1, 'taychialee', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(2, 'meganwang', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
+(1, 'A0000001', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(2, 'A0000002', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
 
 
 insert into lecturer_user(lecturer_id, username, password) values
-(1, 'esthertan', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(2, 'chiayuenkwan', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(3, 'tancherwah', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(4, 'nguyentritin', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(5, 'leeboonkee', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(6, 'felicitas', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
+(1, 'L0000001', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(2, 'L0000002', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(3, 'L0000003', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(4, 'L0000004', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(5, 'L0000005', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(6, 'L0000006', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
 
 insert into student_user(student_id, username, password) values
-(1, 'phungkhanhchi', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(2, 'fengliying', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(3, 'wangyibo', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(4, 'xiaozhan', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(5, 'wuyifan', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(6, 'ohsehun', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
-(7, 'songhyekyo', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
+(1, 'S0000001', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(2, 'S0000002', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(3, 'S0000003', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(4, 'S0000004', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(5, 'S0000005', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(6, 'S0000006', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS'),
+(7, 'S0000007', '$2y$12$MXISci0nld0o6UBqSef0wOg1j137w7aMpI0QSdKry5ybiWneqy9aS');
 
 
 

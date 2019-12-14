@@ -14,15 +14,35 @@
             the course registration result.
         </p>
         <table>
+            <tr>
+                <td>Student name</td>
+                <td>Course name</td>
+                <td>Approve</td>
+                <td>Reject</td>
+            </tr>
             <tr th:each="course: ${pendingCourses}">
-                <td>[[${course.studentByCourse.firstName}]]</td>
+                <td>
+                    <a th:href="@{|/admin/student/${course.studentByCourse.studentId}|}" th:text="${course.studentByCourse}"></a>
+                </td>
                 <td>[[${course.courseByStudent.courseName}]]</td>
-                <td><a th:href=@{/admin/course/approve/{studentId}/{semesterId}/{courseId}(studentId=${course.studentByCourse.studentId},semesterId=${nextSemester.semesterId},courseId=${course.courseByStudent.courseId})}>
+                <td><a th:href=@{|/admin/${page}/course/approve/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|}>
                     Approve</a></td>
-                <td><a th:href=@{/admin/course/reject/{studentId}/{semesterId}/{courseId}(studentId=${course.studentByCourse.studentId},semesterId=${nextSemester.semesterId},courseId=${course.courseByStudent.courseId})}>
+                <td><a th:href=@{|/admin/${page}/course/reject/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|}>
                     Reject</a></td>
             </tr>
         </table>
+        <div>
+            <div>
+                <nav>
+                    <ul>
+                        <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
+                            <a class="page-link"
+                               th:href="@{|/admin/course/registration/review/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 </div>
 </body>

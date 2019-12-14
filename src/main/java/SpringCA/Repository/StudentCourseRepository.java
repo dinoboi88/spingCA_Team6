@@ -7,6 +7,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface StudentCourseRepository extends JpaRepository<StudentCourse, StudentCourseId> {
     Iterable<StudentCourse> findByCourseByStudent_CourseId(int courseId);
 
@@ -20,6 +22,8 @@ public interface StudentCourseRepository extends JpaRepository<StudentCourse, St
 
     Iterable<StudentCourse> findByStudentByCourse_StudentIdAndStatus(int studentId, String status);
 
-    Iterable<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status);
+    Page<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status, Pageable pageable);
+
+    List<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status);
 
 }

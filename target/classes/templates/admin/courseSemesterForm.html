@@ -19,8 +19,7 @@
     <label for="lecturer">Lecturer </label>
     <select th:field="*{lecturerByCourse.lecturerId}" id="lecturer">
         <option th:each="lecturer: ${lecturers}" th:value=${lecturer.lecturerId}
-                th:text="${lecturer.middleName} != null ? ${lecturer.lastName} + ' ' + ${lecturer.middleName} + ' ' + ${lecturer.firstName} :
-${lecturer.lastName} + ' ' + ${lecturer.firstName}"></option>
+                th:text="${lecturer}"></option>
     </select>
 
     <input type="submit" value="Save">

@@ -110,6 +110,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return firstName +" "+ middleName + "," + lastName;
+        if(middleName != null) return lastName +" "+ middleName + " " + firstName;
+        else return lastName + " " + firstName;
     }
 }

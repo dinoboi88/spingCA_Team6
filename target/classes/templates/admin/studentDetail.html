@@ -6,11 +6,8 @@
 </head>
 <body>
 <div>
-    <p th:if="${student.middleName} != null">
-        [[${student.lastName} + ' ' + ${student.middleName} + ' ' + ${student.firstName}]]
-    </p>
-    <p th:if="${student.middleName} == null">[[${student.lastName} + ' ' + ${student.firstName}]]</p>
-    <p> Gender: [[${student.gender}}]]</p>
+    <p th:text="${student}"></p>
+    <p> Gender: [[${student.gender}]]</p>
     <p> Birthdate: [[${#dates.format(student.birthDate, 'dd-MM-yyyy')}]]</p>
     <p> Mobile phone: [[${student.mobile}]]</p>
     <p> Email: [[${student.email}]]</p>
@@ -22,13 +19,20 @@
     <p> GPA: [[${student.GPA}]]</p>
 
     <p> List of courses:</p>
-    <tr th:each="course: ${coursesByStudent}">
-        <td></td>
-        <td th:text="course.courseByStudent.semesterStudentCourse"></td>
-        <td th:text="course.courseByStudent.courseCode"></td>
-        <td th:text="course.courseByStudent.courseName"></td>
-        <td th:text="course.courseByStudent.score"></td>
-    </tr>
+    <table>
+        <tr>
+            <td>Semester</td>
+            <td>Course code</td>
+            <td>Course name</td>
+            <td>Score</td>
+        </tr>
+        <tr th:each="course: ${coursesByStudent}">
+            <td th:text="${course.semesterStudentCourse.semesterLabel}"></td>
+            <td th:text="${course.courseByStudent.courseCode}"></td>
+            <td th:text="${course.courseByStudent.courseName}"></td>
+            <td th:text="${course.score}"></td>
+        </tr>
+    </table>
 
     <p><a th:href="@{/admin/student/edit/{id}(id=${student.studentId})}">Edit</a></p>
     <p><a th:href="@{/admin/student/delete/{id}(id=${student.studentId})}">Delete</a></p>

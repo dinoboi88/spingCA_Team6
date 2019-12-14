@@ -20,10 +20,9 @@
             </thead>
             <tbody>
             <tr th:each="lecturer : ${lecturerList}">
-                <td th:if="${lecturer.lecturerByCourse.middleName} != null">
-                    [[${lecturer.lecturerByCourse.lastName} + ' ' + ${lecturer.lecturerByCourse.middleName} + ' ' + ${lecturer.lecturerByCourse.firstName}]]
+                <td>
+                    <a th:href="@{|/admin/lecturer/${lecturer.lecturerByCourse.lecturerId}|}" th:text="${lecturer.lecturerByCourse}"></a>
                 </td>
-                <td th:if="${lecturer.lecturerByCourse.middleName} == null">[[${lecturer.lecturerByCourse.lastName} + ' ' + ${lecturer.lecturerByCourse.firstName}]]</td>
                 <td th:text="${lecturer.lecturerByCourse.departmentLecturer.departmentName}"></td>
             </tr>
             </tbody>
@@ -43,10 +42,9 @@
             </thead>
             <tbody>
             <tr th:each="student : ${studentCourseList}">
-                <td th:if="${student.studentByCourse.middleName} != null">
-                    [[${student.studentByCourse.lastName} + ' ' + ${student.studentByCourse.middleName} + ' ' + ${student.studentByCourse.firstName}]]
+                <td>
+                    <a th:href="@{|/admin/student/${student.studentByCourse.studentId}|}" th:text="${student.studentByCourse}"></a>
                 </td>
-                <td th:if="${student.studentByCourse.middleName} == null">[[${student.studentByCourse.lastName} + ' ' + ${student.studentByCourse.firstName}]]</td>
                 <td th:text="${student.score}"></td>
             </tr>
             </tbody>

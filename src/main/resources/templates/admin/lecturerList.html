@@ -3,14 +3,67 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<style>
+    .navbar-custom{
+        background-color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
 
+    .navbar-custom a{
+        color:#fff
+    }
+
+    .navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
+    .welcome {float:right;
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .btn-link{
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .table_div{
+        max-width:1500px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    body.lecturerlist a.lecturerlist{
+        background-color:#D07221
+    }
+
+    div.add_lecturer{
+        margin-top:30px;
+        margin-bottom:30px;
+        margin-left:50px;
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+</style>
+
+<body class="lecturerlist">
+
+<div th:insert="~{admin/index :: adminheader}"></div>
+<div class="add_lecturer">
+    <a href="/admin/lecturer/addLecturer" >Add a new Lecturer</a>
+</div>
 <div th:switch="${lecturerList}">
     <h2 th:case="null">No lecturers yet!</h2>
-    <div th:case="*">
-        <h2>Users</h2>
-        <table>
+    <div th:case="*" class="table_div">
+        <table class="table" >
             <thead>
             <tr>
                 <th>Name</th>
@@ -20,36 +73,32 @@
                 <th>Email</th>
                 <th>Address</th>
                 <th>Department</th>
-                <th>Details</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="lecturer : ${lecturerList}">
-                <td th:if="${lecturer.middleName} != null">
-                    [[${lecturer.lastName} + ' ' + ${lecturer.middleName} + ' ' + ${lecturer.firstName}]]
+                <td>
+                    <a th:href="@{|/admin/lecturer/${lecturer.lecturerId}|}" th:text="${lecturer}"></a>
                 </td>
-                <td th:if="${lecturer.middleName} == null">[[${lecturer.lastName} + ' ' + ${lecturer.firstName}]]</td>
                 <td th:text="${lecturer.gender}"></td>
                 <td th:text="${#dates.format(lecturer.birthDate, 'dd-MM-yyyy')}"></td>
                 <td th:text="${lecturer.mobile}"></td>
                 <td th:text="${lecturer.email}"></td>
                 <td th:text="${lecturer.address}"></td>
                 <td th:text="${lecturer.departmentLecturer.departmentName}"></td>
-                <td><a th:href="@{/admin/lecturer/{id}(id=${lecturer.lecturerId})}">Details</a></td>
                 <td><a th:href="@{/admin/lecturer/{page}/edit/{id}(page = ${page}, id=${lecturer.lecturerId})}">Edit</a></td>
                 <td><a th:href="@{/admin/lecturer/{page}/delete/{id}(id=${lecturer.lecturerId}, page = ${page})}">Delete</a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/admin/lecturer/addLecturer">Add a new lecturer</a></p>
 </div>
 <div>
-    <div>
+    <div style="position:relative; float:right; margin-right:50px">
         <nav>
-            <ul>
+            <ul class="pagination">
                 <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
                     <a class="page-link" th:href="@{|/admin/lecturer/list/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
                 </li>

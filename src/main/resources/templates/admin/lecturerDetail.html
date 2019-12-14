@@ -6,11 +6,8 @@
 </head>
 <body>
     <div>
-        <p th:if="${lecturer.middleName} != null">
-            [[${lecturer.lastName} + ' ' + ${lecturer.middleName} + ' ' + ${lecturer.firstName}]]
-        </p>
-        <p th:if="${lecturer.middleName} == null">[[${lecturer.lastName} + ' ' + ${lecturer.firstName}]]</p>
-        <p> Gender: [[${lecturer.gender}}]]</p>
+        <p th:text="${lecturer}"></p>
+        <p> Gender: [[${lecturer.gender}]]</p>
         <p> Birthdate: [[${#dates.format(lecturer.birthDate, 'dd-MM-yyyy')}]]</p>
         <p> Mobile phone: [[${lecturer.mobile}]]</p>
         <p> Email: [[${lecturer.email}]]</p>
@@ -18,7 +15,18 @@
         <p> Department: [[${lecturer.departmentLecturer.departmentName}]]</p>
         <p> List of courses:</p>
         <div>
-            <p th:each="course: ${coursesByLecturer}">[[${course.courseName}]]</p>
+            <table>
+                <tr>
+                    <td>Semester</td>
+                    <td>Course code</td>
+                    <td>Course name</td>
+                </tr>
+                <tr th:each="course: ${coursesByLecturer}">
+                    <td th:text = "${course.semesterLecturerCourse.semesterLabel}"></td>
+                    <td th:text = "${course.courseByLecturer.courseCode}"></td>
+                    <td th:text = "${course.courseByLecturer.courseName}"></td>
+                </tr>
+            </table>
         </div>
 
         <p><a th:href="@{/admin/lecturer/edit/{id}(id=${lecturer.lecturerId})}">Edit</a></p>

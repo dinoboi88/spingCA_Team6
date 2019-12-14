@@ -4,7 +4,7 @@
     <title>Spring Boot Security</title>
 </head>
 <body>
-<p th:text="${adminUser.adminUser.firstName}"></p>
+<p th:text="${adminUser.adminUser}"></p>
 <a th:href="@{/admin/changePassword/{username}(username=${adminUser.username})}">Change password</a>
 
 <!--<div class="container">-->
