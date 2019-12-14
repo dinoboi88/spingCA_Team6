@@ -1,6 +1,7 @@
 package SpringCA.entities;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -9,6 +10,9 @@ public class Semester {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int semesterId;
     private String semesterLabel;
+
+    private Date startDate;
+    private Date endDate;
 
     @OneToMany(mappedBy = "semesterEnrolled")
     private List<Student> studentList;
@@ -21,8 +25,10 @@ public class Semester {
 
     public Semester(){}
 
-    public Semester(String semesterLabel) {
+    public Semester(String semesterLabel, Date startDate, Date endDate) {
         this.semesterLabel = semesterLabel;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
 
     public int getSemesterId() {
@@ -39,5 +45,21 @@ public class Semester {
 
     public void setSemesterLabel(String semesterLabel) {
         this.semesterLabel = semesterLabel;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 }

@@ -78,6 +78,8 @@ primary key (username)
 create table semester (
 semester_id integer not null auto_increment,
 semester_label varchar(45) not null,
+start_date date not null,
+end_date date not null,
 primary key (semester_id)
 );
 

@@ -10,15 +10,17 @@
 <p th:if="${studentUser.studentUser.middleName} == null">Welcome, <a>[[${studentUser.studentUser.lastName}]]
     [[${studentUser.studentUser.firstName}]]</a></p>
 
-<a href="CourseEnrolledList.html"
-   th:href="@{/student/courseEnrolled/}+${studentUser.studentUser.studentId}"> Course Enrolled</a>
+<a th:href="@{/student/courseEnrolled/}"> Course Enrolled</a>
 
 <br />
 
-<a href="courseScore.html"
-   th:href="@{/student/courseScore/}+${studentUser.studentUser.studentId}"> Course Score</a>
+<a th:href="@{/student/courseScore/}"> Course Score</a>
 
 <br />
+
+<a th:href="@{/student/availableCourse}">Available courses</a><br/>
+<a th:href="@{/student/pendingCourse}">Pending courses</a><br/>
+<a th:href="@{/student/rejectedCourse}">Rejected courses</a><br/>
 
 
 <form th:action="@{/student/j_spring_security_logout}" method="post">

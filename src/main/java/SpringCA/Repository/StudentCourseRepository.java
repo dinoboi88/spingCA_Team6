@@ -17,4 +17,9 @@ public interface StudentCourseRepository extends JpaRepository<StudentCourse, St
             int courseId, int SemesterId, String status);
 
     Iterable<StudentCourse> findByStudentByCourse_StudentId(int studentId);
+
+    Iterable<StudentCourse> findByStudentByCourse_StudentIdAndStatus(int studentId, String status);
+
+    Iterable<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status);
+
 }

@@ -1,5 +1,10 @@
-insert into semester(semester_label) values ('[2017-2018] Semester 1'), ('[2017-2018] Semester 2'), ('[2018-2019] Semester 1'),
-('[2018-2019] Semester 2'), ('[2019-2020] Semester 1'), ('[2019-2020] Semester 2');
+insert into semester(semester_label, start_date, end_date) values
+('[2017-2018] Semester 1', '2019-09-04', '2017-12-20'),
+('[2017-2018] Semester 2', '2018-01-15', '2018-05-20'),
+('[2018-2019] Semester 1', '2018-09-04', '2018-12-20'),
+('[2018-2019] Semester 2', '2019-01-15', '2019-05-20'),
+('[2019-2020] Semester 1', '2019-09-04', '2019-12-20'),
+('[2019-2020] Semester 2', '2020-01-15', '2020-05-20');
 
 insert into degree(degree_label) values('Graduate Diploma in System Analysis'), ('Master of Technology in Software Engineering');
 

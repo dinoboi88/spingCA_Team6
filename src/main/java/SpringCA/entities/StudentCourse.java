@@ -28,11 +28,12 @@ public class StudentCourse {
 
     public StudentCourse(){}
 
-    public StudentCourse(Student studentByCourse, Course courseByStudent, Semester semesterStudentCourse, float score) {
+    public StudentCourse(Student studentByCourse, Course courseByStudent, Semester semesterStudentCourse, float score, String status) {
         this.studentByCourse = studentByCourse;
         this.courseByStudent = courseByStudent;
         this.semesterStudentCourse = semesterStudentCourse;
         this.score = score;
+        this.status = status;
     }
 
     public Student getStudentByCourse() {
@@ -65,5 +66,13 @@ public class StudentCourse {
 
     public void setScore(float score) {
         this.score = score;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

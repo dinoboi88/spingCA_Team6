@@ -1,10 +1,9 @@
 package SpringCA.Controller;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import SpringCA.Repository.*;
-import SpringCA.Service.UserService;
+import SpringCA.Service.UserServiceImpl;
 import SpringCA.entities.*;
 import SpringCA.model.ResetPassword;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +37,7 @@ public class LecturerController {
 	private SemesterRepository semesterRepository;
 
 	@Autowired
-	private UserService userService;
+	private UserServiceImpl userService;
 
 	@Autowired
 	private LecturerUserRepository lecturerUserRepository;

@@ -2,7 +2,7 @@ package SpringCA.Controller;
 
 import SpringCA.Repository.*;
 import SpringCA.Service.EmailServiceImpl;
-import SpringCA.Service.UserService;
+import SpringCA.Service.UserServiceImpl;
 import SpringCA.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,14 +27,14 @@ public class ResetPasswordController {
     private PasswordResetTokenLecturerRepository tokenLecturerRepository;
     private AdminUserRepository adminUserRepository;
     private PasswordResetTokenAdminRepository tokenAdminRepository;
-    private UserService userService;
+    private UserServiceImpl userService;
     private EmailServiceImpl emailServiceImpl;
 
     @Autowired
     public ResetPasswordController(StudentUserRepository studentUserRepository, PasswordResetTokenStudentRepository tokenStudentRepository,
                                    LecturerUserRepository lecturerUserRepository, PasswordResetTokenLecturerRepository tokenLecturerRepository,
                                    AdminUserRepository adminUserRepository, PasswordResetTokenAdminRepository tokenAdminRepository,
-                                   UserService userService, EmailServiceImpl emailServiceImpl) {
+                                   UserServiceImpl userService, EmailServiceImpl emailServiceImpl) {
         this.studentUserRepository = studentUserRepository;
         this.tokenStudentRepository = tokenStudentRepository;
         this.lecturerUserRepository = lecturerUserRepository;

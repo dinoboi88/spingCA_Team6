@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Boot Security</title>
+</head>
+<body>
+<div th:switch="${availableCourses}">
+    <h2 th:case="null">No courses available!</h2>
+    <div th:case="*">
+        <p>Your are registering for semester [[${nextSemester.semesterLabel}]]. This semester
+            will start from [[${nextSemester.startDate}]], please be reminded to complete the
+        registration before this date</p>
+        <table>
+            <tr th:each="course: ${availableCourses}">
+                <td>[[${course.courseName}]]</td>
+                <td><a th:href=@{/student/course/register/{semesterId}/{courseId}(semesterId=${nextSemester.semesterId},courseId=${course.courseId})}>Register</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

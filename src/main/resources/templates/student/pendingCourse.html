@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Boot Security</title>
+</head>
+<body>
+<div th:switch="${pendingCourses}">
+    <h2 th:case="null">No pending courses</h2>
+    <div th:case="*">
+        <p>Your are viewing pending course that you have already registered for semester
+            [[${nextSemester.semesterLabel}]]. This semester
+            will start from [[${nextSemester.startDate}]], please be reminded to cancel if
+            you would like to do so before the admin review registration request or before this date</p>
+        <table>
+            <tr th:each="course: ${pendingCourses}">
+                <td>[[${course.courseByStudent.courseName}]]</td>
+                <td><a th:href=@{/student/course/cancel/{semesterId}/{courseId}(semesterId=${nextSemester.semesterId},courseId=${course.courseByStudent.courseId})}>Cancel</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
