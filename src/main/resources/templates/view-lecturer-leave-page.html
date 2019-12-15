@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+table{width:100%;}
+table td, table th { border: 1px solid grey;}
+table th { background: #eee;}
+.pagination-div{user-select: none;}
+.pagination-div span{border-radius:3px;border:1px solid #999;
+   padding:5px;margin:10px 0px 0px 10px;display:inline-block}
+span.selected{background:#ccf;}
+</style>
+<title>Lecturer Leave Application and Status</title>
+</head>
+<body>
+<h2>Leave Application and Status</h2>
+
+<!-- 
+<h3 th:text=${page.content[0].student_course.courseByStudent.courseName}></h3>
+<h3 th:text=${page.content[0].student_course.semesterStudentCourse.semesterLabel}></h3>
+ -->
+
+<p th:if="${page.content}==null">No leave application history</p>
+
+<table th:if="${page.content}!=null">
+    <tr><th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+    <tr	th:each="lecturer_leave : ${page.content}">
+		<td th:text="${#temporals.format(lecturer_leave.startDate,'yyyy-MM-dd')}"></td>	
+        <td th:text="${#temporals.format(lecturer_leave.endDate,'yyyy-MM-dd')}"></td>
+        <td th:text="${lecturer_leave.status}"></td>
+        <td>
+        	<a th:href="@{/lecturer-leave-application/{lecturerId}/{startDate}
+        	(lecturerId=${lecturer_leave.lecturerByLeave.lecturerId},
+        	startDate=${lecturer_leave.startDate})}">Update Leave</a>
+        	<a th:href="@{/delete-lecturer-leave-application/{lecturerId}/{startDate}
+        	(lecturerId=${lecturer_leave.lecturerByLeave.lecturerId},
+        	startDate=${lecturer_leave.startDate})}">Delete Leave</a>
+        </td>
+    </tr>
+       
+</table>
+
+<div>
+	<a th:href="@{/new-lecturer-leave-application}">Apply for Leave</a>
+</div>
+
+<div class="pagination-div">
+    <span th:if="${page.hasPrevious()}">
+        <a th:href="@{/view-lecturer-leave-applications/(page=${page.number-1},size=${page.size})}">Previous</a>
+    </span>
+    <th:block th:each="i: ${#numbers.sequence(0, page.totalPages - 1)}">
+        <span th:if="${page.number == i}" class="selected">[[${i}+1]]</span>
+        <span th:unless="${page.number == i}">
+             <a th:href="@{/view-lecturer-leave-applications/(page=${i},size=${page.size})}">[[${i}+1]]</a>
+        </span>
+    </th:block>
+    <span th:if="${page.hasNext()}">
+        <a th:href="@{/view-lecturer-leave-applications/(page=${page.number+1},size=${page.size})}">Next</a>
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,9 +1,10 @@
 package SpringCA.Repository;
 
 import SpringCA.entities.CompositeId.StudentCourseId;
+import SpringCA.entities.Course;
+import SpringCA.entities.Semester;
 import SpringCA.entities.StudentCourse;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -25,5 +26,7 @@ public interface StudentCourseRepository extends JpaRepository<StudentCourse, St
     Page<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status, Pageable pageable);
 
     List<StudentCourse> findBySemesterStudentCourse_SemesterIdAndStatus(int semesterId, String status);
+      
+    public Page<StudentCourse> findAllByCourseByStudentAndSemesterStudentCourse(Course course,Semester sem,Pageable pageable);
 
 }

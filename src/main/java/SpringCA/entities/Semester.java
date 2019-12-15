@@ -62,4 +62,9 @@ public class Semester {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
+    
+	@Override
+	public String toString() {
+		return "semesterId: " + semesterId + ", semesterLabel: " + semesterLabel;
+	}
 }
