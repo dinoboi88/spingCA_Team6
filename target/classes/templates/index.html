@@ -15,14 +15,64 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <body>
-<h2>Demo Spring Boot - Multiple Form Login</h2>
-<a th:href="@{/login_{id}(id='admin')}">admin page</a> <br />
-<a th:href="@{/login_{id}(id='lecturer')}">lecturer page</a><br/>
-<a th:href="@{/login_{id}(id='student')}">student page</a>
+<main role="main">
 
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading" style="color:#003D7B">STUDENT MANAGEMENT SYSTEM</h1>
+            <p class="lead text-muted" style="color:#003D7B">THIS IS THE STUDENT LOGIN SYSTEM FOR EVERYONE</p>
 
+        </div>
+    </section>
 
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="static/Admin.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#003D7B">Admin Login Page</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a th:href="@{/login_{id}(id='admin')}" type="button" class="btn btn-primary" style="background-color:#003D7B">Admin Login</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#003D7B">Lecturer Login Page</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a th:href="@{/login_{id}(id='lecturer')}" type="button" class="btn btn-primary" style="background-color:#003D7B">Lecturer Login</a>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#003D7B">Student Login Page</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a th:href="@{/login_{id}(id='student')}" type="button" class="btn btn-primary" style="background-color:#003D7B">student Login</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
 </body>
 </html>

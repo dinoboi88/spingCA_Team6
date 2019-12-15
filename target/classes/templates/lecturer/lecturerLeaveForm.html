@@ -3,25 +3,119 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
 </head>
 <body>
-<div th:switch="${msg}">
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#003D7B">
+
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/lecturer/course/list/page/1}">View assigned courses</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/lecturer/leave/list}" class="nav-link">View leaves</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/lecturer/leave/pending/list}" class="nav-link">View pending leaves</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/lecturer/leave/rejected/list}" class="nav-link">View rejected leaves</a>
+            </li>
+        </ul>
+
+        <a class="navbar-brand" href="#">
+            <p th:if="${lecturerUser.lecturerUser.middleName} != null">Welcome, <a th:href="@{/lecturer/profile}">[[${lecturerUser.lecturerUser.lastName}]]
+                [[${lecturerUser.lecturerUser.middleName}]] [[${lecturerUser.lecturerUser.firstName}]]</a></p>
+            <p th:if="${lecturerUser.lecturerUser.middleName} == null">Welcome, <a>[[${lecturerUser.lecturerUser.lastName}]]
+                [[${lecturerUser.lecturerUser.firstName}]]</a></p>
+        </a>
+
+        <span class="navbar-text">
+
+
+      <form th:action="@{/lecturer/j_spring_security_logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <input type="submit" value="Logout" class="btn btn-dark" />
+	</form>
+    </span>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<main role="main" class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+        <div class="lh-100">
+
+
+
+
+
+
+
+        <div th:switch="${msg}">
     <p th:case="null"></p>
     <p th:case="*" th:text="${msg}"></p>
 </div>
+
+
+
 <form th:action = "${date} == null ? @{/lecturer/leave/application/submit/new} : @{|/lecturer/leave/application/submit/${date}|}"
       th:object="${lecturerLeave}" method="post">
-    <label for="startDate">Start date </label>
-    <input type="date" th:field="*{startDate}" id="startDate"><br>
-    <p th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
 
-    <label for="endDate">End date </label>
-    <input type="date" th:field="*{endDate}" id="endDate"><br>
-    <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+
+
+    <table class="table table-striped">
+        <tr>
+            <th scope="row"><label for="startDate">Start date </label></th>
+            <td>
+                <input type="date" th:field="*{startDate}" id="startDate">
+                <p th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></p>
+            </td>
+
+
+        </tr>>
+        <tr>
+            <th scope="row">   <label for="endDate">End date </label></th>
+            <td>
+                <input type="date" th:field="*{endDate}" id="endDate">
+                <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
+            </td>
+
+        </tr>
+    </table>
+
     <input type="hidden" th:field="${lecturerLeave.lecturerByLeave.lecturerId}">
 
-    <input type="submit" value="Save">
+    <input type="submit" value="Save" class="btn" style="background-color:#003D7B; color:white;">
 </form>
+
+
+
+
+        </div>
+    </div>
+</main>
+
 
 </body>
 </html>

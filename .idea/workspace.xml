@@ -2,38 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46a3db79-7fe9-46b3-b0ed-e370eb895aa6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerLeaveRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/courseList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentByCourse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringCA/Controller/LecturerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringCA/Controller/LecturerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerCourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerCourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringCA/Validation/FieldMatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringCA/Validation/FieldMatchValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/LecturerLeaveId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/LecturerLeaveId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringCA/entities/LecturerLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SpringCA/entities/LecturerLeave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/expiredLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/expiredLink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/courseList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/courseList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerCourseList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentCourseList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentByCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentByCourse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/lecturer/updateScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/lecturer/updateScore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resetPasswordUrl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resetPasswordUrl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$AdminSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$AdminSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$LecturerSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$LecturerSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$StudentSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig$StudentSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Configuration/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Controller/LecturerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Controller/LecturerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Controller/ResetPasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Controller/ResetPasswordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Controller/StudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/AdminUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/AdminUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/CourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/CourseRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerCourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerCourseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerLeaveRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerLeaveRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/LecturerUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenAdminRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenAdminRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenLecturerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenLecturerRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenStudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/PasswordResetTokenStudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/StudentCourseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/StudentCourseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Repository/StudentUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Repository/StudentUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/AdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/AdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/AdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/AdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/EmailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/EmailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/EmailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/FileSystemStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/FileSystemStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/StudentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/StudentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserDetailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Validation/ContactNumberValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Validation/ContactNumberValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Validation/EmailValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Validation/EmailValidator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/Validation/FieldMatchValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/Validation/FieldMatchValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/csv/CsvWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/csv/CsvWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/AdminUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/AdminUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/LecturerCourseId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/LecturerCourseId.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/LecturerLeaveId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/LecturerLeaveId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/StudentCourseId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/StudentCourseId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/UserId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/CompositeId/UserId.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Degree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Degree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Lecturer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Lecturer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerCourse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerCourse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerLeave.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerLeave.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__migration.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V2__migration.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/LecturerUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenLecturer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenLecturer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenStudent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/PasswordResetTokenStudent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Semester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Semester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/StudentCourse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/StudentCourse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/StudentUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/StudentUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/entities/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/model/HRefModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/model/HRefModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SpringCA/model/ResetPassword.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SpringCA/model/ResetPassword.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/courseRegistrationReview.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/courseRegistrationReview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/expiredLink.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/expiredLink.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/courseList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/courseList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerCourseList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/studentCourseList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerLeaveForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerLeaveForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerLeaveList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerLeaveList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerPendingLeaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerPendingLeaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerProfile.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerProfile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerRejectedLeaves.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/lecturerRejectedLeaves.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/studentByCourse.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/studentByCourse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/lecturer/updateScore.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/lecturer/updateScore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/resetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/resetPassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/resetPasswordUrl.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/resetPasswordUrl.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,111 +103,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/Date.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="975" column="15" selection-start-line="975" selection-start-column="15" selection-end-line="975" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="71" column="83" lean-forward="true" selection-start-line="71" selection-start-column="83" selection-end-line="71" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/LecturerLeave.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Controller/LecturerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="245" column="32" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerLeaveRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/LecturerLeaveId.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-              <folding>
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="74" column="81" lean-forward="true" selection-end-line="87" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,259 +116,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Controller/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Service/FileSystemStorageService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Repository/StudentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/entities/Semester.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/entities/StudentCourse.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/availableCourse.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/pendingCourse.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/rejectCourse.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Repository/CourseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/rejectedCourse.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/student/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Service/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Service/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Configuration/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/entities/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/courseSemesterForm.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/adminProfile.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Repository/StudentCourseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/courseDetail.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/studentDetail.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lecturerDetail.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/courseRegistrationReview.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/studentList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/lecturerList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/courseList.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerCourseList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentCourseList.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerCourseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/courseList.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/studentByCourse.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/updateScore.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V2__migration.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Validation/FieldMatchValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Validation/DateValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Validation/DateConstraint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/entities/LecturerLeave.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/LecturerLeaveId.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerLeaveRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/index.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html" />
-        <option value="$PROJECT_DIR$/src/main/java/SpringCA/Controller/LecturerController.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SpringCA" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SpringCA" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SpringCA" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="814" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="Configuration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="CompositeId" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="Repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="Validation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="migration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="lecturer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringCA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringCA" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -426,6 +131,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -436,18 +144,6 @@
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SpringCA" />
@@ -456,6 +152,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -471,85 +179,50 @@
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46591000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="814" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32825485" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32825485" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32963988" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49928468" weight="0.32963988" />
-      <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32825485" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.1416309" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32825485" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.32825485" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" weight="0.32963988" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49928468" weight="0.32963988" />
-      <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32825485" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.1416309" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="38" key="#Project_Structure" timestamp="1576404257198">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="233" y="38" key="#Project_Structure/0.0.1280.760@0.0.1280.760" timestamp="1576404257198" />
+    <state width="1238" height="188" key="GridCell.Tab.0.bottom" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.0.center" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.0.left" timestamp="1576406344472">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1576406344472" />
+    <state width="1238" height="188" key="GridCell.Tab.0.right" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.1.bottom" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.1.center" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.1.left" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state width="1238" height="188" key="GridCell.Tab.1.right" timestamp="1576406344480">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="188" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1576406344480" />
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2" timestamp="1576412154705">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="233" y="113" key="Vcs.Push.Dialog.v2/0.0.1280.760@0.0.1280.760" timestamp="1576412154705" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -557,380 +230,9 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/SpringCA/Controller/AdminController.java</url>
           <line>189</line>
-          <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Configuration/Configuration.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Configuration/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/ContactNumberValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/courseSemesterForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/course-semester.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/adminProfile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Service/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.2.1.RELEASE/spring-data-commons-2.2.1.RELEASE.jar!/org/springframework/data/domain/Page.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/studentDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="33" column="13" selection-start-line="22" selection-start-column="8" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lecturerList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/courseList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/courseRegistrationReview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/lecturerDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerCourseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="47" selection-start-line="43" selection-start-column="4" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/courseDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Repository/StudentCourseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="103" lean-forward="true" selection-start-line="26" selection-start-column="103" selection-end-line="26" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="52" column="69" lean-forward="true" selection-start-line="52" selection-start-column="69" selection-end-line="52" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/studentByCourse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/StudentCourseId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/studentCourseList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerCourseList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fileUpload.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__migration.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/EmailConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/DateValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/FieldMatchConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/DateConstraint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/EmailValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Validation/FieldMatchValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/studentList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="9" column="7" selection-end-line="119" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/courseForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="80" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/courseList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="90" column="14" selection-end-line="97" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/updateScore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="34" column="75" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="406" column="36" lean-forward="true" selection-start-line="398" selection-start-column="8" selection-end-line="406" selection-end-column="36" />
-          <folding>
-            <element signature="e#4115#4116#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__init.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/studentForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.2.1.RELEASE/spring-context-5.2.1.RELEASE-sources.jar!/org/springframework/format/annotation/DateTimeFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/CompositeId/LecturerLeaveId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Repository/LecturerLeaveRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveForm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="975" column="15" selection-start-line="975" selection-start-column="15" selection-end-line="975" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerPendingLeaves.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="74" column="81" lean-forward="true" selection-end-line="87" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerRejectedLeaves.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="68" column="20" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/lecturer/lecturerLeaveList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="71" column="83" lean-forward="true" selection-start-line="71" selection-start-column="83" selection-end-line="71" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/entities/LecturerLeave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SpringCA/Controller/LecturerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="245" column="32" selection-start-line="245" selection-start-column="32" selection-end-line="245" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

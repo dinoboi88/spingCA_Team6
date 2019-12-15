@@ -2,8 +2,75 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#003D7B">
+
+
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link"  th:href="@{/admin/student/list}">Student list</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/admin/lecturer/list}" class="nav-link">Lecturer list</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/admin/course/list}" class="nav-link">Course list</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/admin/course/registration/review/page/1}" class="nav-link">Review course registration list</a>
+            </li>
+
+        </ul>
+
+        <a class="navbar-brand" href="#">
+            <p class="text-right">Welcome, <a th:href="@{/admin/profile}">[[${adminUser.adminUser}]]</a></p>
+        </a>
+
+        <span class="navbar-text">
+
+
+      <form th:action="@{/lecturer/j_spring_security_logout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <input type="submit" value="Logout" class="btn btn-dark" />
+	</form>
+    </span>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<main role="main" class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+        <div class="lh-100">
+
+
+
+
 <div th:switch="${pendingCourses}">
     <h2 th:case="null">No pending courses</h2>
     <div th:case="*">
@@ -13,23 +80,26 @@
             registration requests before this date. An email will be sent to student to inform them of
             the course registration result.
         </p>
-        <table>
+        <table class="table table-bordered" >
+            <thead class="thead-light">
             <tr>
-                <td>Student name</td>
-                <td>Course name</td>
-                <td>Approve</td>
-                <td>Reject</td>
+                <th scope="col">Student name</th>
+                <th scope="col">Course name</th>
+                <th colspan="2" scope="col">Action</th>
             </tr>
+            </thead>
+            <tbody>
             <tr th:each="course: ${pendingCourses}">
                 <td>
                     <a th:href="@{|/admin/student/${course.studentByCourse.studentId}|}" th:text="${course.studentByCourse}"></a>
                 </td>
                 <td>[[${course.courseByStudent.courseName}]]</td>
-                <td><a th:href=@{|/admin/${page}/course/approve/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|}>
+                <td><a th:href=@{|/admin/${page}/course/approve/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|} class="btn" style="background-color:#003D7B; color: white;">
                     Approve</a></td>
-                <td><a th:href=@{|/admin/${page}/course/reject/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|}>
+                <td><a th:href=@{|/admin/${page}/course/reject/${course.studentByCourse.studentId}/${nextSemester.semesterId}/${course.courseByStudent.courseId}|} class="btn" style="background-color:#003D7B; color: white;">
                     Reject</a></td>
             </tr>
+            </tbody>
         </table>
         <div>
             <div>
@@ -45,5 +115,16 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</main>
+
+
 </body>
 </html>
