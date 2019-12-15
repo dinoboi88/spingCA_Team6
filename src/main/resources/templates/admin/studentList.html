@@ -4,35 +4,35 @@
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .navbar-custom{
-        background-color:#003D7B;
-        font-family:Century Gothic;
-        font-weight:bold;
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
     }
 
-    .navbar-custom a{
-        color:#fff
+    #navbar-custom a{
+        color:#fff ;
     }
 
-    .navbar-custom a:hover{
+    #navbar-custom a:hover{
         background-color:#D07221 !important;
     }
-    .welcome {float:right;
-        color:#003D7B;
+
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
         font-family:Century Gothic;
         font-weight:bold;
     }
 
     .btn-link{
-        color:#003D7B;
-        font-family:Century Gothic;
-        font-weight:bold;
-    }
+        color:#003D7B !important;
+        font-weight:bold !important;
 
     .table_div{
         max-width:1500px;
@@ -44,29 +44,27 @@
         background-color:#D07221
     }
 
-    div.add_student{
+    a.add_student{
         margin-top:30px;
         margin-bottom:30px;
         margin-left:50px;
-        color:#003D7B;
+        color:#003D7B !important;
         font-family:Century Gothic;
-        font-weight:bold;
+        font-weight:bold !important;
     }
 </style>
 
 <body class="studentlist">
-
 <div th:insert="~{admin/index :: adminheader}"></div>
-
-<div class="add_student">
-    <a href="/admin/student/addStudent" >Add a new Student</a>
+<div class="container-fluid" style="margin-top: 30px; margin-bottom: 20px">
+    <a href="/admin/student/addStudent" class="add_student" style="font-weight: bolder; color:#003D7B" >Add a new Student</a>
 </div>
 
 <div th:switch="${studentList}">
     <h2 th:case="null">No users yet!</h2>
     <div th:case="*" class="table_div">
-        <table class="table" >
-            <thead>
+        <table class="table table-hover" >
+            <thead class="thead-light">
             <tr>
                 <th >Name</th>
                 <th >Gender</th>
@@ -110,8 +108,6 @@
             <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
                 <a class="page-link" th:href="@{|/admin/student/list/page/${pageNumber}|}" th:text=${pageNumber}>1</a>
             </li>
-
-
         </ul>
     </nav>
 </div>

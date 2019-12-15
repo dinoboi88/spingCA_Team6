@@ -4,36 +4,35 @@
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .navbar-custom{
-        background-color:#003D7B;
-        font-family:Century Gothic;
-        font-weight:bold;
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
     }
 
-    .navbar-custom a{
-        color:#fff
+    #navbar-custom a{
+        color:#fff ;
     }
 
-    .navbar-custom a:hover{
+    #navbar-custom a:hover{
         background-color:#D07221 !important;
     }
 
-    .welcome{float:right;
-        color:#003D7B;
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
         font-family:Century Gothic;
         font-weight:bold;
     }
 
     .btn-link{
-        color:#003D7B;
-        font-family:Century Gothic;
-        font-weight:bold;
-    }
+        color:#003D7B !important;
+        font-weight:bold !important;
 
     .table_div{
         max-width:1500px;
@@ -57,14 +56,17 @@
 </style>
 <body class="courselist">
 <div th:insert="~{admin/index :: adminheader}"></div>
-<div class="add_course">
-    <a href="/admin/course/addCourse">Add a new Course</a>
+
+
+<div class="container-fluid" style="margin-top: 30px; margin-bottom: 20px">
+    <a href="/admin/course/addCourse" class="add_course" style="font-weight: bolder; color:#003D7B">Add a new Course</a>
 </div>
+
 <div th:switch="${courseList}">
     <h2 th:case="null">No courses yet!</h2>
     <div th:case="*"  class="table_div">
-        <table class="table">
-            <thead>
+        <table class="table table-hover">
+            <thead class="thead-light">
             <tr>
                 <th>Course code</th>
                 <th>Course name</th>

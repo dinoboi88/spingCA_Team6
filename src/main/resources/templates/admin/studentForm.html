@@ -3,74 +3,166 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-<form th:action = "@{/admin/student/{page}/save/{id}(page = ${page}, id=${id})}"
-      th:object="${student}" method="post">
-    <label for="firstName">First name: </label>
-    <input type="text" th:field="*{firstName}" id="firstName"><br>
-    <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+<style>
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
+    }
 
-    <label for="lastName">Last name </label>
-    <input type="text" th:field="*{lastName}" id="lastName"><br>
-    <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+    #navbar-custom a{
+        color:#fff ;
+    }
 
-    <label for="middleName">Middle name </label>
-    <input type="text" th:field="*{middleName}" id="middleName"><br>
+    #navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
 
-    <label for="gender">Gender </label>
-    <select th:field="*{gender}" id="gender">
-        <option th:value="'Male'" th:text="Male"></option>
-        <option th:value="'Female'" th:text="Female"></option>
-    </select>
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
 
-    <label for="birthDate">Birthdate </label>
-    <input type="date" th:field="*{birthDate}" id="birthDate"><br>
+    .btn-link{
+        color:#003D7B !important;
+        font-weight:bold !important;
+</style>
 
-    <label for="status">Status </label>
-    <select th:field="*{status}" id="status">
-        <option th:value="'Enrolling'" th:text="Enrolling"></option>
-        <option th:value="'Graduated'" th:text="Graduated"></option>
-        <option th:value="'Deferred'" th:text="Deferred"></option>
-        <option th:value="'Quit'" th:text="Quit"></option>
-    </select>
+<body class="studentlist">
+<div th:insert="~{admin/index :: adminheader}"></div>
 
-    <label for="degree">Degree </label>
-    <select th:field="*{degree.degreeId}" id="degree">
-        <option th:each="degree: ${degrees}" th:value=${degree.degreeId} th:text=${degree.degreeLabel}></option>
-    </select>
+<div class="container" style="margin-top:30px">
+    <form class="form-horizontal" th:action = "@{/admin/student/{page}/save/{id}(page = ${page}, id=${id})}"
+          th:object="${student}" method="post">
+        <div class="input-group mb-3 input-group-md">
+        <div class="input-group-prepend">
+            <label for="firstName" class="input-group-text">First name: </label>
+        </div>
+                <input type="text" class="form-control" th:field="*{firstName}" id="firstName"><br>
+                <p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></p>
+        </div>
 
-    <label for="level">Level </label>
-    <select th:field="*{level}" id="level">
-        <option th:value="'Year 1'" th:text="'Year 1'"></option>
-        <option th:value="'Year 2'" th:text="'Year 2'"></option>
-        <option th:value="'Year 3'" th:text="'Year 3'"></option>
-        <option th:value="'Year 4'" th:text="'Year 4'"></option>
-        <option th:value="'Year 5'" th:text="'Year 5'"></option>
-        <option th:value="'Year 6'" th:text="'Year 6'"></option>
-    </select>
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="lastName"class="input-group-text">Last name </label>
+            </div>
+        <input type="text" class="form-control" th:field="*{lastName}" id="lastName"><br>
+        <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></p>
+        </div>
 
-    <label for="semester">Semester </label>
-    <select th:field="*{semesterEnrolled.semesterId}" id="semester">
-        <option th:each="semester: ${semesters}" th:value=${semester.semesterId} th:text=${semester.semesterLabel}></option>
-    </select>
-    <p th:if="${#fields.hasErrors('semesterEnrolled')}" th:errors="*{semesterEnrolled}"></p>
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="middleName" class="input-group-text">Middle name </label>
+            </div>
+        <input type="text" class="form-control" th:field="*{middleName}" id="middleName"><br>
+        </div>
 
-    <label for="address">Address </label>
-    <input type="text" th:field="*{address}" id="address"><br>
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="gender" class="input-group-text">Gender </label>
+            </div>
+        <select th:field="*{gender}" class="form-control" id="gender">
+            <option th:value="'Male'" th:text="Male"></option>
+            <option th:value="'Female'" th:text="Female"></option>
+        </select>
+        </div>
 
-    <label for="mobile">Mobile </label>
-    <input type="text" th:field="*{mobile}" id="mobile"><br>
-    <p th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"></p>
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="birthDate" class="input-group-text">Birthdate </label>
+            </div>
+        <input type="date" class="form-control" th:field="*{birthDate}" id="birthDate"><br>
+        </div>
 
-    <label for="email">Email </label>
-    <input type="text" th:field="*{email}" id="email"><br>
-    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
 
-    <label for="GPA">GPA </label>
-    <input type="number" step="any" th:field="*{GPA}" id="GPA"><br>
-    <input type="submit" value="Save">
-</form>
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="status" class="input-group-text">Status </label>
+            </div>
+        <select th:field="*{status}" class="form-control" id="status">
+            <option th:value="'Enrolling'" th:text="Enrolling"></option>
+            <option th:value="'Graduated'" th:text="Graduated"></option>
+            <option th:value="'Deferred'" th:text="Deferred"></option>
+            <option th:value="'Quit'" th:text="Quit"></option>
+        </select>
+        </div>
 
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="degree" class="input-group-text">Degree </label>
+            </div>
+        <select th:field="*{degree.degreeId}" class="form-control"  id="degree">
+            <option th:each="degree: ${degrees}" th:value=${degree.degreeId} th:text=${degree.degreeLabel}></option>
+        </select>
+        </div>
+
+        <div class="input-group mb-3 input-group-md">
+            <div class="input-group-prepend">
+        <label for="level" class="input-group-text">Level </label>
+            </div>
+        <select th:field="*{level}" class="form-control"  id="level">
+            <option th:value="'Year 1'" th:text="'Year 1'"></option>
+            <option th:value="'Year 2'" th:text="'Year 2'"></option>
+            <option th:value="'Year 3'" th:text="'Year 3'"></option>
+            <option th:value="'Year 4'" th:text="'Year 4'"></option>
+            <option th:value="'Year 5'" th:text="'Year 5'"></option>
+            <option th:value="'Year 6'" th:text="'Year 6'"></option>
+        </select>
+            </div>
+
+            <div class="input-group mb-3 input-group-md">
+                <div class="input-group-prepend">
+        <label for="semester" class="input-group-text">Semester </label>
+                </div>
+        <select th:field="*{semesterEnrolled.semesterId}" class="form-control" id="semester">
+            <option th:each="semester: ${semesters}" th:value=${semester.semesterId} th:text=${semester.semesterLabel}></option>
+        </select>
+        <p th:if="${#fields.hasErrors('semesterEnrolled')}" th:errors="*{semesterEnrolled}"></p>
+            </div>
+
+
+            <div class="input-group mb-3 input-group-md">
+                <div class="input-group-prepend">
+        <label for="address" class="input-group-text">Address </label>
+                </div>
+        <input type="text" class="form-control" th:field="*{address}" id="address"><br>
+            </div>
+
+            <div class="input-group mb-3 input-group-md">
+                <div class="input-group-prepend">
+        <label for="mobile" class="input-group-text">Mobile </label>
+                </div>
+        <input type="text" class="form-control" th:field="*{mobile}" id="mobile"><br>
+        <p th:if="${#fields.hasErrors('mobile')}" th:errors="*{mobile}"></p>
+            </div>
+
+            <div class="input-group mb-3 input-group-md">
+                <div class="input-group-prepend">
+        <label for="email" class="input-group-text">Email </label>
+                </div>
+        <input type="text" class="form-control" th:field="*{email}" id="email"><br>
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+            </div>
+
+            <div class="input-group mb-3 input-group-md">
+                <div class="input-group-prepend">
+        <label for="GPA" class="input-group-text">GPA </label>
+                </div>
+        <input type="number" class="form-control" step="any" th:field="*{GPA}" id="GPA"><br>
+            </div>
+
+        <div class="input-group mb-3 input-group-md" >
+        <input type="submit" class="form-control" style="background-color:#003D7B; color: white; font-weight: bolder" value="Save">
+            </div>
+
+    </form>
+</div>
 </body>
 </html>

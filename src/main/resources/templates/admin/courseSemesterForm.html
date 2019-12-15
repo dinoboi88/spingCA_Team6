@@ -3,27 +3,77 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
+    }
+
+    #navbar-custom a{
+        color:#fff ;
+    }
+
+    #navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
+
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .btn-link{
+        color:#003D7B !important;
+        font-weight:bold !important;
+</style>
+
 <body>
-<h4 th:text="${lecturerCourse.courseByLecturer.courseCode}"></h4>
-<h4 th:text="${lecturerCourse.courseByLecturer.courseName}"></h4>
+<div th:insert="~{admin/index :: adminheader}"></div>
+<div class="container" style="margin-top:30px">
 
-<form th:action = "@{/admin/course/detail/{id}/addSemester(id=${lecturerCourse.courseByLecturer.courseId})}"
+<form class="form-horizontal" th:action = "@{/admin/course/detail/{id}/addSemester(id=${lecturerCourse.courseByLecturer.courseId})}"
       th:object="${lecturerCourse}" method="post">
-
-    <label for="semester">Semester: </label>
-    <select th:field="*{semesterLecturerCourse.semesterId}" id="semester">
+    <div class="input-group mb-3 input-group-md">
+        <h5 th:text="${lecturerCourse.courseByLecturer.courseCode}"></h5>
+    </div>
+    <div class="input-group mb-3 input-group-md">
+        <h5 th:text="${lecturerCourse.courseByLecturer.courseName}"></h5>
+    </div>
+    <div class="input-group mb-3 input-group-md">
+        <div class="input-group-prepend">
+    <label for="semester" class="input-group-text">Semester: </label>
+        </div>
+    <select class="form-control" th:field="*{semesterLecturerCourse.semesterId}" id="semester">
         <option th:each="semester: ${semesters}" th:value=${semester.semesterId} th:text=${semester.semesterLabel}></option>
     </select>
+    </div>
 
-    <label for="lecturer">Lecturer </label>
-    <select th:field="*{lecturerByCourse.lecturerId}" id="lecturer">
+    <div class="input-group mb-3 input-group-md">
+        <div class="input-group-prepend">
+    <label for="lecturer" class="input-group-text">Lecturer </label>
+        </div>
+    <select class="form-control" th:field="*{lecturerByCourse.lecturerId}" id="lecturer">
         <option th:each="lecturer: ${lecturers}" th:value=${lecturer.lecturerId}
                 th:text="${lecturer}"></option>
     </select>
+    </div>
 
-    <input type="submit" value="Save">
+    <div class="input-group mb-3 input-group-md" >
+        <input type="submit" class="form-control" style="background-color:#003D7B; color: white; font-weight: bolder" value="Save">
+    </div>
+
+
+
+
 </form>
-
+</div>
 </body>
 </html>

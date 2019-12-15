@@ -3,34 +3,78 @@
 <head lang="en">
     <meta charset="UTF-8"/>
     <title>ReactJS + Spring Data REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+
+<style>
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
+    }
+
+    #navbar-custom a{
+        color:#fff ;
+    }
+
+    #navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
+
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+
+    .btn-link{
+        color:#003D7B !important;
+        font-weight:bold !important;
+</style>
+
+
 <body>
-    <div>
-        <p th:text="${lecturer}"></p>
-        <p> Gender: [[${lecturer.gender}]]</p>
-        <p> Birthdate: [[${#dates.format(lecturer.birthDate, 'dd-MM-yyyy')}]]</p>
-        <p> Mobile phone: [[${lecturer.mobile}]]</p>
-        <p> Email: [[${lecturer.email}]]</p>
-        <p> Address: [[${lecturer.address}]]</p>
-        <p> Department: [[${lecturer.departmentLecturer.departmentName}]]</p>
-        <p> List of courses:</p>
-        <div>
-            <table>
+<div th:insert="~{admin/index :: adminheader}"></div>
+<div  style="margin-top:30px">
+        <div class="container-fluid">
+            <ul class="nav navbar navbar-left d-flex d-inline-flex">
+                <li class="nav-item d-inline-flex  align-items-center mr-2"><a class="nav-link d-inline-flex" style=" background-color: #003D7B; color: white" th:href="@{/admin/lecturer/edit/{id}(id=${lecturer.lecturerId})}">Edit</a></li>
+                <li class="nav-item d-inline-flex  align-items-center mr-2"><a class="nav-link d-inline-flex" style=" background-color: #003D7B; color: white" th:href="@{/admin/lecturer/delete/{id}(id=${lecturer.lecturerId})}">Delete</a></li>
+            </ul>
+        </div>
+
+    <div class="container">
+        <table class="table">
+            <tbody>
+            <tr><td th:text="${lecturer}"></td><td></td></tr>
+            <tr><td> Gender:</td> <td>[[${lecturer.gender}]]</td></tr>
+            <tr><td> Birthdate:</td> <td>[[${#dates.format(lecturer.birthDate, 'dd-MM-yyyy')}]]</td></tr>
+            <tr><td> Mobile phone:</td> <td>[[${lecturer.mobile}]]</td></tr>
+            <tr><td> Email:</td> <td>[[${lecturer.email}]]</td></tr>
+            <tr><td> Address:</td><td> [[${lecturer.address}]]</td></tr>
+            <tr><td> Department:</td><td> [[${lecturer.departmentLecturer.departmentName}]]</td></tr>
+            <tr><td> List of courses:</td><td></td></tr>
+            </tbody>
+        </table>
+
+        <table style="width: 100%">
                 <tr>
-                    <td>Semester</td>
-                    <td>Course code</td>
-                    <td>Course name</td>
+                    <td style="width:25%;">Semester</td>
+                    <td style="width:25%;">Course code</td>
+                    <td style="width:25%;">Course name</td>
                 </tr>
                 <tr th:each="course: ${coursesByLecturer}">
-                    <td th:text = "${course.semesterLecturerCourse.semesterLabel}"></td>
-                    <td th:text = "${course.courseByLecturer.courseCode}"></td>
-                    <td th:text = "${course.courseByLecturer.courseName}"></td>
+                    <td style="width:25%;" th:text = "${course.semesterLecturerCourse.semesterLabel}"></td>
+                    <td style="width:25%;" th:text = "${course.courseByLecturer.courseCode}"></td>
+                    <td style="width:25%;" th:text = "${course.courseByLecturer.courseName}"></td>
                 </tr>
             </table>
         </div>
 
-        <p><a th:href="@{/admin/lecturer/edit/{id}(id=${lecturer.lecturerId})}">Edit</a></p>
-        <p><a th:href="@{/admin/lecturer/delete/{id}(id=${lecturer.lecturerId})}">Delete</a></p>
     </div>
 </body>
 </html>
