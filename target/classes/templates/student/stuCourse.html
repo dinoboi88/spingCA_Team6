@@ -4,16 +4,52 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>stuCourseEnrolled</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+		.navbar-custom{
+		background-color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+
+		.navbar-custom a{
+		color:#fff
+		}
+
+
+		.navbar-custom a:hover{
+		background-color:#D07221 !important;
+		}
+
+		.submit-custom{
+		background-color:white
+		}
+
+		.container{
+		max-width:1400px
+		}
+</style>
 <body>
+<div th:insert="~{student/index :: studentheader}"></div>
 <h1>Enrolled Courses</h1>
-<a th:href="@{/student/student}">Navigate</a>
-	<table >
+<div class="container">
+	<table class="table" >
+		<thead>
+		<tr>
+			<th>Course Code</th>
+			<th>Course Name</th>
+			<th>Semester</th>
+		</tr>
+		</thead>
 		<tr th:each="stuCourse:${courseEnrolled}">
 			<td th:text=${stuCourse.courseByStudent.courseCode}>Course Code</td>
 			<td th:text=${stuCourse.courseByStudent.courseName}>Course Name</td>
 			<td th:text=${stuCourse.semesterStudentCourse.semesterLabel}>Semester Label</td>
 		</tr>
 	</table>
+</div>
 </body>
 </html>

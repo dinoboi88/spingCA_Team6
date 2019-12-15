@@ -2,26 +2,140 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+		.navbar-custom{
+		background-color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+
+		.navbar-custom a{
+		color:#fff
+		}
+
+
+		.navbar-custom a:hover{
+		background-color:transparent !important;
+		}
+
+		.submit-custom{
+		background-color:white
+		}
+
+		.container{
+		max-width:1400px
+		}
+
+	.btn{
+		background-color:#003D7B;
+		color:white;
+		padding: 2px 6px 2px 6px;
+
+		}
+
+		a:hover{
+		background-color:#D07221 !important;
+		color:black;
+		}
+
+</style>
 <body>
-<p th:text="${student.firstName}"></p>
-<a th:href="@{/student/changePassword/{username}(username=${studentUser.username})}">Change password</a>
+<div th:insert="~{student/index :: studentheader}"></div>
+<div class="container">
+    <table class="table">
+        <!--<p th:text="${student.firstName}"></p>-->
+        <tr>
+            <td>Name: </td>
+            <td>
+                <span th:text="${student.lastName}">StduentLastName</span>
+                <span th:text="${student.firstName}">StduentFirstName</span>
+                <span th:text="${student.middleName}">StduentMiddleName</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender: </td>
+            <td>
+                <p th:text="${student.gender}">Gender</p>
+            </td>
+        </tr>
 
-<a th:href="@{/student/edit/}+${student.studentId}"> Edit Contact Information </a>
+        <tr>
+            <td>BirthDate: </td>
+            <td>
+                <p th:text="${student.birthDate}">Birth Date</p>
+            </td>
+        </tr>
 
-<span th:text="${student.lastName}">StduentLastName</span>
-<span th:text="${student.firstName}">StduentFirstName</span>
-<span th:text="${student.middleName}">StduentMiddleName</span>
-</p>
-<p th:text="${student.gender}">Gender</p>
-<p th:text="${student.birthDate}">Birth Date</p>
-<p th:text="${student.email}">Email</p>
-<p th:text="${student.mobile}">Mobile</p>
-<p th:text="${student.address}">Address</p>
-<p th:text="${student.status}">Status</p>
-<p th:text="${student.level}">Level</p>
-<p th:text="${student.semesterEnrolled.semesterLabel}">semester</p>
-<p th:text="${student.GPA}">GPA</p>
-<p th:text="${student.degree.degreeLabel}">Degree</p>
+        <tr>
+            <td>Email: </td>
+            <td>
+                <p th:text="${student.email}">Email</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mobile: </td>
+            <td>
+                <p th:text="${student.mobile}">Mobile</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Address: </td>
+            <td>
+                <p th:text="${student.address}">Address</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Status: </td>
+            <td>
+                <p th:text="${student.status}">Status</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Level: </td>
+            <td>
+                <p th:text="${student.level}">Level</p>
+            </td>
+        </tr>
+        <tr>
+            <td>Semester: </td>
+            <td>
+                <p th:text="${student.semesterEnrolled.semesterLabel}">semester</p>
+            </td>
+        </tr>
+        <tr>
+            <td>GPA: </td>
+            <td>
+                <p th:text="${student.GPA}">GPA</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Degree: </td>
+            <td>
+                <p th:text="${student.degree.degreeLabel}">Degree</p>
+            </td>
+        </tr>
+
+        <!--<&#45;&#45;<p th:text="${student.birthDate}">Birth Date</p>-->
+        <!--<p th:text="${student.email}">Email</p>-->
+        <!--<p th:text="${student.mobile}">Mobile</p>-->
+        <!--<p th:text="${student.address}">Address</p>-->
+        <!--<p th:text="${student.status}">Status</p>-->
+        <!--<p th:text="${student.level}">Level</p>-->
+        <!--<p th:text="${student.semesterEnrolled.semesterLabel}">semester</p>-->
+        <!--<p th:text="${student.GPA}">GPA</p>-->
+        <!--<p th:text="${student.degree.degreeLabel}">Degree</p>-->
+    </table>
+    <a class="btn" th:href="@{/student/changePassword/{username}(username=${studentUser.username})}">Change password</a>
+
+
+    <a class="btn" th:href="@{/student/edit/}+${student.studentId}"> Edit Contact Information </a>
+</div>
 </body>
 </html>

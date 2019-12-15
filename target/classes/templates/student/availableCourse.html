@@ -2,18 +2,66 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+		.navbar-custom{
+		background-color:#003D7B;
+		font-family:Century Gothic;
+		font-weight:bold;
+		}
+
+		.navbar-custom a{
+		color:#fff
+		}
+
+
+		.navbar-custom a:hover{
+		background-color:#D07221 !important;
+		}
+
+		.submit-custom{
+		background-color:white
+		}
+
+		.container{
+		max-width:1400px
+		}
+			.btn{
+		background-color:#003D7B;
+		color:white;
+		padding: 2px 6px 2px 6px;
+
+		}
+
+		a:hover{
+		background-color:#D07221 !important;
+		color:black;
+		}
+
+</style>
 <body>
+<div th:insert="~{student/index :: studentheader}"></div>
 <div th:switch="${availableCourses}">
+
     <h2 th:case="null">No courses available!</h2>
-    <div th:case="*">
+    <div class="alert alert-warning" th:case="*">
         <p>Your are registering for semester [[${nextSemester.semesterLabel}]]. This semester
             will start from [[${nextSemester.startDate}]], please be reminded to complete the
         registration before this date</p>
-        <table>
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Course Name</th>
+            </tr>
+            </thead>
             <tr th:each="course: ${availableCourses}">
                 <td>[[${course.courseName}]]</td>
-                <td><a th:href=@{/student/course/register/{semesterId}/{courseId}(semesterId=${nextSemester.semesterId},courseId=${course.courseId})}>Register</a></td>
+                <td><a class="btn" th:href=@{/student/course/register/{semesterId}/{courseId}(semesterId=${nextSemester.semesterId},courseId=${course.courseId})}>Register</a></td>
             </tr>
         </table>
     </div>
