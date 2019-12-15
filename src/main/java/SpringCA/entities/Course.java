@@ -73,4 +73,10 @@ public class Course {
     public void setDepartmentCourse(Department departmentCourse) {
         this.departmentCourse = departmentCourse;
     }
+
+	@Override
+	public String toString() {
+		return "Course Code: " + courseCode + ", Course Name:" + courseName;
+    
+	}
 }
