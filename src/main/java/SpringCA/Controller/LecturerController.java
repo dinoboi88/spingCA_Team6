@@ -39,16 +39,19 @@ public class LecturerController {
 	private UserServiceImpl userService;
 	private LecturerUserRepository lecturerUserRepository;
 	private LecturerLeaveRepository lecturerLeaveRepository;
+	private StudentRepository studentRepository;
 
 	public LecturerController(LecturerCourseRepository lecturerCourseRepository, LecturerRepository lecturerRepository,
 							  StudentCourseRepository studentCourseRepository, UserServiceImpl userService,
-							  LecturerUserRepository lecturerUserRepository, LecturerLeaveRepository lecturerLeaveRepository) {
+							  LecturerUserRepository lecturerUserRepository, LecturerLeaveRepository lecturerLeaveRepository,
+							  StudentRepository studentRepository) {
 		this.lecturerCourseRepository = lecturerCourseRepository;
 		this.lecturerRepository = lecturerRepository;
 		this.studentCourseRepository = studentCourseRepository;
 		this.userService = userService;
 		this.lecturerUserRepository = lecturerUserRepository;
 		this.lecturerLeaveRepository = lecturerLeaveRepository;
+		this.studentRepository=studentRepository;
 	}
 
 	private int size = 3;
@@ -140,7 +143,31 @@ public class LecturerController {
 			model.addAttribute("page", page);
 			return "lecturer/updateScore";
 		}
+		
 		studentCourseRepository.save(studentCourse);
+		
+		int studentId=studentCourse.getStudentByCourse().getStudentId();
+		Iterable<StudentCourse> semesterCourses=studentCourseRepository.
+				findByStudentByCourse_StudentId(studentId);
+		float GPA=0;
+		int courseUnit=0;
+		float score;
+		int totalCourseUnits=0;
+		float total_Score_mult_CourseUnits=0;
+		
+		 for(StudentCourse semCourse:semesterCourses) {
+			 courseUnit=semCourse.getCourseByStudent().getCourseUnit();
+			 score=semCourse.getScore();
+			 total_Score_mult_CourseUnits+=score*courseUnit;
+			 totalCourseUnits+=courseUnit;
+		 }
+		 
+		 GPA=total_Score_mult_CourseUnits/totalCourseUnits;
+		 GPA=(float) (Math.round(GPA*100.0)/100.0);
+		 Student student=studentRepository.findById(studentId).get();
+		 student.setGPA(GPA);
+		 studentRepository.save(student);
+		
 		return "redirect:/lecturer/course/student/" + studentCourse.getCourseByStudent().getCourseId() + "/"
 				+ studentCourse.getSemesterStudentCourse().getSemesterId() + "/page/" + page;
 	}
