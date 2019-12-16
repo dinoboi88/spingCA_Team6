@@ -2,12 +2,55 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
     <title>Spring Boot Security</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+<style>
+    #navbar-custom{
+        background-color:#003D7B ;
+        font-weight:bold ;
+    }
+    #navbar-custom a{
+        color:#fff ;
+    }
+    #navbar-custom a:hover{
+        background-color:#D07221 !important;
+    }
+    .welcome{
+        float:right;
+        color:#003D7B;!important;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+    .btn-link{
+        color:#003D7B !important;
+        font-weight:bold !important;
+    .table_div{
+        max-width:1500px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    body.lecturerlist a.lecturerlist{
+        background-color:#D07221
+    }
+    div.add_lecturer{
+        margin-top:30px;
+        margin-bottom:30px;
+        margin-left:50px;
+        color:#003D7B;
+        font-family:Century Gothic;
+        font-weight:bold;
+    }
+    </style>
 <body>
+<div th:insert="~{admin/index :: adminheader}"></div>
 <div th:switch="${pendingLeaveRequest}">
     <h2 th:case="null">No pending leave request</h2>
     <div th:case="*">
-        <table>
+        <table class="table table-hover">
+            <thead class="thead-light">
             <tr>
                 <td>Lecturer name</td>
                 <td>Start date</td>
@@ -15,6 +58,7 @@
                 <td>Approve</td>
                 <td>Reject</td>
             </tr>
+            </thead>
             <tr th:each="leave: ${pendingLeaveRequest}">
                 <td>
                     <a th:href="@{|/admin/lecturer/{leave.lecturerByLeave.lecturerId}|}" th:text="${leave.lecturerByLeave}"></a>
@@ -30,7 +74,7 @@
         <div>
             <div>
                 <nav>
-                    <ul>
+                    <ul class="pagination">
                         <li class="page-item" th:each="pageNumber : ${pageNumbers}" >
                             <a class="page-link"
                                th:href="@{|/admin/course/registration/review/page/${pageNumber}|}" th:text=${pageNumber}>1</a>

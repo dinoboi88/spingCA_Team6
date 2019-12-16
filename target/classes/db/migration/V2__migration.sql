@@ -15,9 +15,17 @@ values('Chi', 'Phung', 'Khanh', '1996-08-25', 'Female', 'khanhchi2596@gmail.com'
 ('Zhan', 'Xiao', '', '1991-08-11', 'Male', 'xiaozhan@gmail.com', '71672878', 'Year 1', 'Enrolling', 5, 1, '', 0.0),
 ('Fan', 'Wu', 'Yi', '1992-05-21', 'Male', 'kriswu@gmail.com', '92376743', 'Year 1', 'Enrolling', 5, 1, '', 0.0),
 ('Hun', 'Oh', 'Se', '1990-07-07', 'Male', 'ohsehun@gmail.com', '81387481','Year 1', 'Enrolling', 5, 1, '', 0.0),
-('Kyo', 'Song', 'Hye', '1988-02-26', 'Female', 'songhyekyo@gmail.com', '81368434','Year 1', 'Enrolling', 5, 1, '', 0.0);
-
-
+('Kyo', 'Song', 'Hye', '1988-02-26', 'Female', 'songhyekyo@gmail.com', '81368434','Year 1', 'Enrolling', 5, 1, '', 0.0),
+('Bonnie', 'Tan','meimei','1992-02-28','Female','bonnietan@gmail.com','98989898','Year 1','Enrolling',5,1,'',0.0),
+('Wayne', 'Carlos','David','1997-03-13','Male','waynecarlos@gmail.com','91237878','Year 1','Enrolling',5,1,'',0.0),
+('Micheal', 'Lim','maige','1993-01-01','Male','micheallim@gmail.com','81239828','Year 1','Enrolling',5,1,'',0.0),
+('Susu', 'Su','','1994-11-17','Female','sususu@gmail.com','98989898','Year 1','Enrolling',5,1,'',0.0),
+('Mara', 'Gupta','','1987-02-28','Female','maragupta@gmail.com','91234567','Year 1','Enrolling',5,1,'',0.0),
+('Elsa', 'Lin','Ru','2000-07-27','Female','elsalin@gmail.com','92222222','Year 1','Enrolling',5,1,'',0.0),
+('Will', 'Tan','DaMan','1988-04-28','Male','willtan@gmail.com','91111111','Year 1','Enrolling',5,1,'',0.0),
+('Mary', 'Has','Alamb','1993-08-08','Female','maryhasalamv@gmail.com','93333333','Year 1','Enrolling',5,1,'',0.0),
+('Liam', 'Pache','Bo','1982-06-09','Male','liampache@gmail.com','94444444','Year 1','Enrolling',5,1,'',0.0),
+('Han', 'Solo','','1998-09-12','Male','hansolo@gmail.com','97772222','Year 1','Enrolling',5,1,'',0.0);
 insert into department(department_name) values('Institute of System Science'), ('School of computing'), ('Business school'), ('Faculty of Science');
 
 insert into course(course_code, course_name, course_unit, department_id) values
@@ -25,7 +33,8 @@ insert into course(course_code, course_name, course_unit, department_id) values
 ('SA4102', 'Enterprise Solution Design', 8, 1),
 ('SA4103', 'Software Engineering', 4, 1),
 ('SA4104', 'Mobile Application Development', 6, 1),
-('SA4105', 'Web Application Development', 8, 1);
+('SA4105', 'Web Application Development', 8, 1),
+('SA4106', 'BlockChain Application', 8, 1);
 
 insert into student_course(course_id, semester_id, student_id, score, status) values
 (1, 5, 1, 0.0, 'Approved'), (1, 5, 2, 0.0, 'Approved'), (1, 5, 3, 0.0, 'Approved'), (1, 5, 4, 0.0, 'Approved'),
@@ -43,7 +52,14 @@ insert into student_course(course_id, semester_id, student_id, score, status) va
 (2, 6, 1, 0.0, 'Pending'), (2, 6, 2, 0.0, 'Pending'), (2, 6, 3, 0.0, 'Pending'), (2, 6, 4, 0.0, 'Pending'),
 (2, 6, 5, 0.0, 'Pending'), (2, 6, 6, 0.0, 'Pending'), (2, 6, 7, 0.0, 'Pending'),
 (3, 6, 1, 0.0, 'Pending'), (3, 6, 2, 0.0, 'Pending'), (3, 6, 3, 0.0, 'Pending'), (3, 6, 4, 0.0, 'Pending'),
-(3, 6, 5, 0.0, 'Pending'), (3, 6, 6, 0.0, 'Pending'), (3, 6, 7, 0.0, 'Pending');
+(3, 6, 5, 0.0, 'Pending'), (3, 6, 6, 0.0, 'Pending'), (3, 6, 7, 0.0, 'Pending'),
+
+(5, 6, 1, 0.0, 'Pending'), (5, 6, 2, 0.0, 'Pending'), (5, 6, 3, 0.0, 'Pending'), (5, 6, 4, 0.0, 'Pending'),
+(5, 6, 5, 0.0, 'Pending'), (5, 6, 6, 0.0, 'Pending'), (5, 6, 7, 0.0, 'Pending'),
+(5, 6, 8, 0.0, 'Pending'), (5, 6, 9, 0.0, 'Pending'), (5, 6, 10, 0.0, 'Pending'), (5, 6, 11, 0.0, 'Pending'),
+(5, 6, 12, 0.0, 'Pending'), (5, 6, 13, 0.0, 'Pending'), (5, 6, 14, 0.0, 'Pending'),
+(4, 6, 1, 0.0, 'Pending'), (4, 6, 2, 0.0, 'Pending'), (4, 6, 3, 0.0, 'Pending'), (4, 6, 4, 0.0, 'Pending'),
+(4, 6, 5, 0.0, 'Pending'), (4, 6, 6, 0.0, 'Pending'), (4, 6, 7, 0.0, 'Pending');
 
 insert into lecturer(first_name, middle_name, last_name, gender, birth_date, email, mobile, department_id)
 values('Esther', '', 'Tan', 'Female', '1982-07-12', 'esthertan@gmail.com', '89217764', 1),
@@ -60,6 +76,7 @@ insert into lecturer_course(course_id, lecturer_id, semester_id) values
 insert into lecturer_leave(lecturer_id, start_date, end_date, status) values
 (1, '2019-12-23', '2020-01-02', 'Approved'),
 (2, '2020-01-12', '2020-01-29', 'Pending');
+
 
 insert into admin(first_name, middle_name, last_name, gender, birth_date, email, mobile) values
 ('Lee', 'Chia', 'Tay', 'Female', '1990-12-01', 'taychialee@gmail.com', '98387643'),
